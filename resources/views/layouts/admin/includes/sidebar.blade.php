@@ -104,20 +104,15 @@
                                 <ul class="collapse" id="faktur">
                                     <div class="sub-menu">
                                     <li>
-                                            <a href="alert.html">Terima Faktur Dari pabrik</a>
+                                            <a href="alert.html">Penerimaan Versekot</a>
                                         </li>
                                         <li>
-                                            <a href="alert.html">Kartu Tagihan</a>
+                                            <a href="alert.html">Pelunasan</a>
                                         </li>
                                         <li>
-                                            <a href="badge.html">Terima uang oleh kasir</a>
+                                            <a href="badge.html">Titipan</a>
                                         </li>
-                                        <li>
-                                            <a href="badge.html">Penerimaan lain lain</a>
-                                        </li>
-                                        <li>
-                                            <a href="badge.html">Pelunasaan Ar</a>
-                                        </li>
+                                       
                                     </div>
                                 </ul>
                                 <li class="has-sub">
@@ -178,37 +173,10 @@
                     <ul class="collapse" id="Pembelian" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
-                            <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#management" aria-expanded="false" aria-controls="management">
-                                    <span class="nav-text">Menu Po(purchase Order)</span> <b class="caret"></b>
-                                </a>
-                                <ul class="collapse" id="management">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="alert.html">pengajuan po pembelian</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="badge.html">konfirmasi po pembelian</a>
-                                        </li>
-                                    </div>
-                                </ul>
-                                <li>
+                        <li>
                                 <a class="sidenav-item-link" href="index.html">
                                     <span class="nav-text">terima  barang dari suplier</span>
 
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sidenav-item-link" href="index.html">
-                                    <span class="nav-text">input faktur pembelian</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sidenav-item-link" href="index.html">
-                                    <span class="nav-text">pelunasan pembelian</span>
                                 </a>
                             </li>
                 </li>

@@ -5,6 +5,9 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-8"><h2>Master <b>Custommer</b></h2></div>
+                    <div>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
                     <div class="col-sm-4">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
@@ -16,81 +19,28 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name <i class="fa fa-sort"></i></th>
-                        <th>Address</th>
-                        <th>City <i class="fa fa-sort"></i></th>
-                        <th>Pin Code</th>
-                        <th>Country <i class="fa fa-sort"></i></th>
+                        <th>nama</th>
+                        <th>Alamat</th>
+                        <th>Kota</th>
+                        <th>Kode Pos</th>
+                        <th>Nik</i></th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
                         <td>Thomas Hardy</td>
+                        <td>almat</td>
                         <td>89 Chiaroscuro Rd.</td>
                         <td>Portland</td>
                         <td>97219</td>
-                        <td>USA</td>
                         <td>
-							<a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_custommer"><i class="material-icons">&#xE417;</i></a>
+                            <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
+                            <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Maria Anders</td>
-                        <td>Obere Str. 57</td>
-                        <td>Berlin</td>
-                        <td>12209</td>
-                        <td>Germany</td>
-                        <td>
-							<a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fran Wilson</td>
-                        <td>C/ Araquil, 67</td>
-                        <td>Madrid</td>
-                        <td>28023</td>
-                        <td>Spain</td>
-                        <td>
-							<a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Dominique Perrier</td>
-                        <td>25, rue Lauriston</td>
-                        <td>Paris</td>
-                        <td>75016</td>
-                        <td>France</td>
-                        <td>
-							<a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Martin Blank</td>
-                        <td>Via Monte Bianco 34</td>
-                        <td>Turin</td>
-                        <td>10100</td>
-                        <td>Italy</td>
-                        <td>
-							<a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>        
+                   
                 </tbody>
             </table>
             <div class="clearfix">
@@ -107,4 +57,9 @@
             </div>
         </div>
     </div>     
+@include('master.modal.view_custommer')
+@include('master.modal.edit_custommer')
+@include('master.modal.add_custommer')
+@include('delete_modal')
+
 @endsection

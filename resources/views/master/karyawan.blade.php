@@ -8,8 +8,8 @@
 						<h2>Master <b>Karyawan</b></h2>
 					</div>
 					<div class="col-sm-7">
-						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>						
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_karyawan"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploud_excel"><i class="material-icons">&#xE24D;</i> <span>Import Via Excel</span></button>						
 					</div>
                 </div>
             </div>
@@ -18,9 +18,8 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>						
-						<th>Date Created</th>
-						<th>Role</th>
-                        <th>Status</th>
+						<th>email</th>
+                        <th>Nik</th>
 						<th>Action</th>
                     </tr>
                 </thead>
@@ -28,35 +27,12 @@
                     <tr>
                         <td>1</td>
                         <td><a href="#">Michael Holz</a></td>
-                        <td>04/10/2013</td>                        
-                        <td>Admin</td>
-						<td><span class="status text-success">&bull;</span> Active</td>
+                        <td>afiaraudy@yahoo.co</td>                        
+						<td> 1332200011</td>
 						<td>
-							<a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-							<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+							<button type="button" class="setting" data-toggle="modal" data-toggle="tooltip" data-target="#edit_karyawan" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></button>
+							<a href="#" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>
 						</td>
-                    </tr>
-					<tr>
-                        <td>2</td>
-                        <td><a href="#">Paula Wilson</a></td>
-                        <td>05/08/2014</td>                       
-						<td>Publisher</td>
-						<td><span class="status text-success">&bull;</span> Active</td>
-						<td>
-							<a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-							<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-						</td>
-                    </tr>
-					<tr>
-                        <td>3</td>
-                        <td>Antonio Moreno</a></td>
-                        <td>11/05/2015</td>
-						<td>Publisher</td>
-                        <td><span class="status text-danger">&bull;</span> Suspended</td>                        
-						<td>
-							<a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-							<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-						</td>                        
                     </tr>
 				
                 </tbody>
@@ -75,4 +51,8 @@
             </div>
         </div>
     </div>     
+    @include('master.modal.uploud_file_karyawan')
+    @include('master.modal.edit_karyawan')
+    @include('master.modal.tambah_karyawan')
+
     @endsection

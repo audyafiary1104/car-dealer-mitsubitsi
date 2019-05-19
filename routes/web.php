@@ -14,7 +14,9 @@
 Route::get('/admin', function () {
     return view('layouts.admin.master');
 });
-
+Route::get('/', function () {
+    return view('login');
+});
 Route::get('/jabatan', function () {
     return view('master.jabatan');
 });
