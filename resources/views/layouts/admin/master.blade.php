@@ -135,6 +135,13 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
 </script>
+<script>
+  $(function() {
+    $( "#name_custommer" ).autocomplete({
+      source: "{{url('getdata')}}"
+    });
+  });
+  </script>
     @stack('styles')
     <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries

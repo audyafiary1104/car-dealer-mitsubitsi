@@ -33,13 +33,17 @@
                                 <a class="sidenav-item-link" href="{{url('karyawan')}}" aria-expanded="false" >
                                     <span class="nav-text">Master Karyawan</span>
                                 </a>
-                               
+                               </li>
                             <li class="active">
                                 <a class="sidenav-item-link" href="{{url('Customer')}}">
                                     <span class="nav-text">Master Customer</span>
                                 </a>
                             </li>
-
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{url('Departement')}}">
+                                    <span class="nav-text">Master Departement</span>
+                                </a>
+                            </li>
                             <li>
                                 <a class="sidenav-item-link" href="{{url('Product')}}">
                                     <span class="nav-text">Master Product</span>
@@ -58,35 +62,16 @@
                     <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                        
-                        <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#management" aria-expanded="false" aria-controls="management">
-                                    <span class="nav-text">Surat Minat Kendaraan</span> <b class="caret"></b>
+                        <li>
+                                <a class="sidenav-item-link" href="{{url('pengajuan_smk')}}">
+                                    <span class="nav-text">Pengajuan Smk</span>
+
                                 </a>
-                                <ul class="collapse" id="management">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="alert.html">Pengajuan Smk</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="badge.html">Konfirmasi Smk (oleh atasan)</a>
-                                        </li>
-                                        <li>
-                                            <a href="badge.html">Setor Versekot</a>
-                                        </li>
-                                        <li>
-                                            <a href="badge.html">Konfirmasi Smk (oleh BM)</a>
-                                        </li>
-                                        <li>
-                                            <a href="badge.html">Serah Terima Survai</a>
-                                        </li>
-                                    </div>
-                                </ul>
+                            </li>
+                            
                             <li>
-                                <a class="sidenav-item-link" href="index.html">
-                                    <span class="nav-text">Serah Terima Survai</span>
+                                <a class="sidenav-item-link" href="{{url('konfirmasi_smk')}}">
+                                    <span class="nav-text">Konfirmasi Smk(oleh Bm)</span>
 
                                 </a>
                             </li>
@@ -104,7 +89,7 @@
                                 <ul class="collapse" id="faktur">
                                     <div class="sub-menu">
                                     <li>
-                                            <a href="alert.html">Penerimaan Versekot</a>
+                                            <a href="{{url('penerimaan_versekot')}}">Penerimaan Versekot</a>
                                         </li>
                                         <li>
                                             <a href="alert.html">Pelunasan</a>

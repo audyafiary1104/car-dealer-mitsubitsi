@@ -16,19 +16,25 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Name</th>						
-						<th>email</th>
+						<th>Alamat</th>
+						<th>jabatan</th>
                         <th>Nik</th>
+						<th>nama atasan</th>
+						<th>Cabang</th>
+                        <th>Departement</th>
 						<th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
                         <td><a href="#">Michael Holz</a></td>
-                        <td>afiaraudy@yahoo.co</td>                        
-						<td> 1332200011</td>
+                        <td>jalan beto</td>  
+                        <td>Supir</td>                      
+						<td>1332200011</td>
+						<td>Audy Afiary</td>
+                        <td>Sales</td>
+						<td>Jakarta</td>
 						<td>
 							<button type="button" class="setting" data-toggle="modal" data-toggle="tooltip" data-target="#edit_karyawan" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></button>
 							<a href="#" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>

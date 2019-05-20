@@ -11,14 +11,27 @@
 |
 */
 
+Route::get('/getdata','SmkController@pengajuan');
 Route::get('/admin', function () {
     return view('layouts.admin.master');
+});
+Route::get('/pengajuan_smk', function () {
+    return view('transaksi_finance.smk.pengajuan_smk');
+});
+Route::get('/konfirmasi_smk', function () {
+    return view('transaksi_finance.smk.konfirmasi_smk');
+});
+Route::get('/penerimaan_versekot', function () {
+    return view('transaksi_finance.kasir.penerimaan_versekot');
 });
 Route::get('/', function () {
     return view('login');
 });
 Route::get('/jabatan', function () {
     return view('master.jabatan');
+});
+Route::get('/Departement', function () {
+    return view('master.departement');
 });
 Route::get('/Customer', function () {
     return view('master.custommer');
