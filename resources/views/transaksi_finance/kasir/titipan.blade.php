@@ -16,7 +16,7 @@
                 <thead>
                     <tr>
 						
-                        <th>No Transaksi</th>
+                        <th>No Titipan</th>
                         <th>No Cust</th>
                         <th>Nama</th>
 						<th>Address</th>
