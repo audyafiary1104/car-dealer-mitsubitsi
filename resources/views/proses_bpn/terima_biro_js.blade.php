@@ -4,7 +4,7 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Master <b>Departement</b></h2></div>
+                    <div class="col-sm-8"><h2>terima dari <b>Biro jasa</b></h2></div>
                     <div>
                         <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
                     </div>
@@ -19,15 +19,25 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>Kode</th>
-                        <th>Nama Departement</th>
+                        <th>no spk</th>
+                        <th>no customer</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>Type Kendaraan</th>
+                        <th>No stnk</th>        
+                        <th>No bpkb</th>                        
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>DPT0001</td>
-                        <td>sales</td>
+                        <td>BY0001</td>
+                        <td>Kas Besar</td>
+                        <td>BY0001</td>
+                        <td>Kas Besar</td>
+                        <td>BY0001</td>
+                        <td>Kas Besar</td>
+                        <td>Kas Besar</td>
                         <td>
                             <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>

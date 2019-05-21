@@ -50,6 +50,11 @@
 
                                 </a>
                             </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('biaya')}}">
+                                    <span class="nav-text">Master biaya</span>
+                                </a>
+                            </li>
 
                         </div>
                     </ul>
@@ -109,11 +114,11 @@
                                     <div class="sub-menu">
 
                                         <li>
-                                            <a href="alert.html">Pengajuan biaya operasional</a>
+                                            <a href="{{url('pengajuan_biaya')}}">Pengajuan biaya operasional</a>
                                         </li>
 
                                         <li>
-                                            <a href="badge.html">Konfirmasi Biaya operasional</a>
+                                            <a href="{{url('konfirmasi_biaya')}}">Konfirmasi Biaya operasional</a>
                                         </li>
                                     </div>
                                 </ul> 
@@ -128,23 +133,23 @@
                     <ul class="collapse" id="Bpn" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                                 <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('serah_terima')}}">
                                     <span class="nav-text">Serah Terima Ke biro jasa</span>
 
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('terima_dari_birojasa')}}">
                                     <span class="nav-text">Terima Dari Biro Jasa</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('terima_stnk')}}">
                                     <span class="nav-text">Serah Terima Stnk Custommer</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('terima_bpk')}}">
                                     <span class="nav-text">Serah Terima BBKB ke custommer</span>
                                 </a>
                             </li>
@@ -159,7 +164,7 @@
                         <div class="sub-menu">
 
                         <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('terima_barang_dari_suplier')}}">
                                     <span class="nav-text">terima  barang dari suplier</span>
 
                                 </a>

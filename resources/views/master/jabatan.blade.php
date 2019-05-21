@@ -14,7 +14,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Kode</th>
                         <th>Jabatan</th>
                         <th>Role</th>
                         <th>Actions</th>
@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>John Doe</td>
+                        <td>JBT0001</td>
                         <td>Admin</td>
                         <td>admin</td>
                         <td>

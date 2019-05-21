@@ -14,6 +14,18 @@ Route::get('/getdata','SmkController@pengajuan');
 Route::get('/admin', function () {
     return view('layouts.admin.master');
 });
+Route::get('/terima_stnk', function () {
+    return view('proses_bpn.terima_cst_stnk');
+});
+Route::get('/serah_terima', function () {
+    return view('proses_bpn.serah_terima');
+});
+Route::get('/terima_dari_birojasa', function () {
+    return view('proses_bpn.terima_biro_js');
+});
+Route::get('/terima_bpk', function () {
+    return view('proses_bpn.terima_bpkb');
+});
 Route::get('/pengajuan_smk', function () {
     return view('transaksi_finance.smk.pengajuan_smk');
 });
@@ -32,8 +44,17 @@ Route::get('/pelunasan', function () {
 Route::get('/titipan', function () {
     return view('transaksi_finance.kasir.titipan');
 });
+Route::get('/pengajuan_biaya', function () {
+    return view('transaksi_finance.biaya.pengajuan_biaya');
+});
+Route::get('/konfirmasi_biaya', function () {
+    return view('transaksi_finance.biaya.konfirmasi_biaya');
+});
 Route::get('/', function () {
     return view('login');
+});
+Route::get('/terima_barang_dari_suplier', function () {
+    return view('transaksi_pembelian.terima_barang_dari_suplier');
 });
 Route::get('/jabatan', function () {
     return view('master.jabatan');
@@ -49,4 +70,7 @@ Route::get('/karyawan', function () {
 });
 Route::get('/Product', function () {
     return view('master.product');
+});
+Route::get('/biaya', function () {
+    return view('master.biaya');
 });
