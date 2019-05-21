@@ -1,10 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class Nilai extends Migration
+class Users extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +11,12 @@ class Nilai extends Migration
      */
     public function up()
     {
-        Schema::create('nilai', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('id_subject');
-            $table->string('id_teacher');
-            $table->string('id_semester');
-            $table->string('id_student');
-            $table->string('value');
-
-
-
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments("id");
+            $table->string("email", 50)->unique();
+            $table->string("password");
         });
     }
-
     /**
      * Reverse the migrations.
      *

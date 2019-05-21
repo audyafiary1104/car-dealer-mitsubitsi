@@ -2,16 +2,16 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-
+<p></p>
     <!-- Icon -->
     <div class="fadeIn first">
-        <h1>Admin Login</h1>
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+    <form method="post"action="{{url('post_login')}}">
+    {{ csrf_field() }}
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="nik">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
   </div>

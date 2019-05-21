@@ -22,7 +22,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li class="dropdown-footer">
-                            <a href="index.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                            <a href="{{url('logout')}}"> <i class="mdi mdi-logout"></i> Log Out </a>
                         </li>
                     </ul>
                 </li>

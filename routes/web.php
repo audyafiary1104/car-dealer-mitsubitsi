@@ -10,9 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/getdata','SmkController@pengajuan');
-Route::get('/admin', function () {
-    return view('layouts.admin.master');
+Route::post('/post_login','UserController@login');
+Route::get('/logout','UserController@logout');
+
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('/admin', function () {
+        return view('layouts.admin.master');
+    });
 });
 Route::get('/terima_stnk', function () {
     return view('proses_bpn.terima_cst_stnk');
@@ -50,9 +55,12 @@ Route::get('/pengajuan_biaya', function () {
 Route::get('/konfirmasi_biaya', function () {
     return view('transaksi_finance.biaya.konfirmasi_biaya');
 });
+Route::get('/konfirmasi_smk_atasan', function () {
+    return view('transaksi_finance.smk.konfirmasi_smk');
+});
 Route::get('/', function () {
     return view('login');
-});
+})->name('account.login');
 Route::get('/terima_barang_dari_suplier', function () {
     return view('transaksi_pembelian.terima_barang_dari_suplier');
 });
@@ -74,3 +82,5 @@ Route::get('/Product', function () {
 Route::get('/biaya', function () {
     return view('master.biaya');
 });
+
+

@@ -73,7 +73,12 @@
 
                                 </a>
                             </li>
-                            
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('konfirmasi_smk_atasan')}}">
+                                    <span class="nav-text">Konfirmasi Smk(oleh atasan)</span>
+
+                                </a>
+                            </li>
                             <li>
                                 <a class="sidenav-item-link" href="{{url('konfirmasi_smk')}}">
                                     <span class="nav-text">Konfirmasi Smk(oleh Bm)</span>

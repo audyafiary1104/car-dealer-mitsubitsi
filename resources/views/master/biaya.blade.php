@@ -30,12 +30,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>BY0001</td>
-                        <td>Kas Besar</td>
-                        <td>BY0001</td>
-                        <td>Kas Besar</td>
-                        <td>BY0001</td>
-                        <td>Kas Besar</td>
+                        <td>621.10.01</td>
+                        <td>GAJI & UPAH</td>
+                        <td>BIAYA</td>
+                        <td>5</td>
+                        <td>Detail GL</td>
+                        <td>5</td>
                         <td>
                             <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>

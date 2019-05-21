@@ -19,6 +19,7 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
+                        <th>Kode Custommer</th>
                         <th>nama</th>
                         <th>Alamat</th>
                         <th>Kota</th>
@@ -29,6 +30,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                    <td>CST0001</td>
                         <td>Thomas Hardy</td>
                         <td>almat</td>
                         <td>89 Chiaroscuro Rd.</td>
