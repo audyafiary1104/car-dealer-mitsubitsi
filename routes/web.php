@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/getdata','SmkController@pengajuan');
 Route::get('/admin', function () {
     return view('layouts.admin.master');
@@ -18,11 +17,20 @@ Route::get('/admin', function () {
 Route::get('/pengajuan_smk', function () {
     return view('transaksi_finance.smk.pengajuan_smk');
 });
+Route::get('/buat_spk', function () {
+    return view('buat_spk');
+});
 Route::get('/konfirmasi_smk', function () {
     return view('transaksi_finance.smk.konfirmasi_smk');
 });
 Route::get('/penerimaan_versekot', function () {
     return view('transaksi_finance.kasir.penerimaan_versekot');
+});
+Route::get('/pelunasan', function () {
+    return view('transaksi_finance.kasir.pelunasan');
+});
+Route::get('/titipan', function () {
+    return view('transaksi_finance.kasir.titipan');
 });
 Route::get('/', function () {
     return view('login');

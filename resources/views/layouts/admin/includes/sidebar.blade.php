@@ -76,7 +76,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="index.html">
+                                <a class="sidenav-item-link" href="{{url('buat_spk')}}">
                                     <span class="nav-text">Buat Spk</span>
 
                                 </a>
@@ -92,10 +92,10 @@
                                             <a href="{{url('penerimaan_versekot')}}">Penerimaan Versekot</a>
                                         </li>
                                         <li>
-                                            <a href="alert.html">Pelunasan</a>
+                                            <a href="{{url('pelunasan')}}">Pelunasan</a>
                                         </li>
                                         <li>
-                                            <a href="badge.html">Titipan</a>
+                                            <a href="{{url('titipan')}}">Titipan</a>
                                         </li>
                                        
                                     </div>
