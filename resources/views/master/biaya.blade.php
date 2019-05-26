@@ -6,7 +6,11 @@
                 <div class="row">
                     <div class="col-sm-8"><h2>Master <b>Biaya</b></h2></div>
                     <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Import Excell</button>
+                    </div>
+                    <div></div>
+                    <div>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Export Excell</button>
                     </div>
                     <div class="col-sm-4">
                         <div class="search-box">

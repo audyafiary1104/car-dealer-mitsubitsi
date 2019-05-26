@@ -27,20 +27,27 @@
                     </tr>
                 </thead>
                 <tbody>
+        @If($htng == 0)
                     <tr>
-                        <td><a href="#">Michael Holz</a></td>
-                        <td>jalan beto</td>  
-                        <td>Supir</td>                      
-						<td>1332200011</td>
-						<td>Audy Afiary</td>
-                        <td>Sales</td>
-						<td>Jakarta</td>
+                       
+                    </tr>
+				@else
+                @foreach($karyawan as $k)
+                    <tr>
+                        <td><a href="#">{{$k->nama}}</a></td>
+                        <td>{{$k->alamat}}</td>  
+                        <td>{{$k->jabatan}}</td>                      
+						<td>{{$k->nik}}</td>
+						<td>{{$k->nama_atasan}}</td>
+                        <td>{{$k->cabang}}</td>
+						<td>{{$k->departement}}</td>
 						<td>
 							<button type="button" class="setting" data-toggle="modal" data-toggle="tooltip" data-target="#edit_karyawan" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></button>
-							<a href="#" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>
+							<a href="/karyawan/del/{{$k->id}}" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>
 						</td>
                     </tr>
-				
+				@endforeach
+                @endif
                 </tbody>
             </table>
 			<div class="clearfix">

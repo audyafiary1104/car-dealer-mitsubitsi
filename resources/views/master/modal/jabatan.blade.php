@@ -14,6 +14,10 @@
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
   </div>
   <div class="form-group">
+    <label for="exampleFormControlInput1">Nik</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nik ">
+  </div>
+  <div class="form-group">
     <label for="exampleFormControlSelect1">Jabatan</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>manager</option>

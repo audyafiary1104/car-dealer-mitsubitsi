@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/post_login','UserController@login');
-Route::get('/logout','UserController@logout');
 
+Route::get('/karyawan','SmkController@karyawan');
+Route::get('/karyawan/del/{id}','SmkController@delete_karyawan');
+Route::post('/post_login','UserController@login');
+Route::get('/pengajuan','SmkCOntroller@pengajuan');
+Route::post('tambah_karyawan','SmkController@add_karyawan');
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('/admin', function () {
@@ -73,9 +76,7 @@ Route::get('/Departement', function () {
 Route::get('/Customer', function () {
     return view('master.custommer');
 });
-Route::get('/karyawan', function () {
-    return view('master.karyawan');
-});
+
 Route::get('/Product', function () {
     return view('master.product');
 });
