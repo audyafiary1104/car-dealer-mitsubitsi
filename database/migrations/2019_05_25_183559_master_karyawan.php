@@ -20,7 +20,6 @@ class MasterKaryawan extends Migration
             $table->string("nama");
             $table->string("cabang");
             $table->string("jabatan");
-
             $table->string("nama_atasan");
             $table->string("departement");
         });

@@ -16,6 +16,8 @@ Route::get('/karyawan/del/{id}','SmkController@delete_karyawan');
 Route::post('/post_login','UserController@login');
 Route::get('/pengajuan','SmkCOntroller@pengajuan');
 Route::post('tambah_karyawan','SmkController@add_karyawan');
+Route::post('add_custommer','SmkController@add_custommer');
+
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('/admin', function () {
