@@ -100,4 +100,5 @@ class SmkController extends Controller {
         Alert::error('Error', 'Data Tidak Berhasil ditambahkan');
         return redirect()->back();
     }
+    
 }

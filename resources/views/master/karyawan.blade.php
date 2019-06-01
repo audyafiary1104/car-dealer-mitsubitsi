@@ -34,7 +34,7 @@
 				@else
                 @foreach($karyawan as $k)
                     <tr>
-                        <td><a href="#">{{$k->nama}}</a></td>
+                        <td><a href="{{url('profile')}}">{{$k->nama}}</a></td>
                         <td>{{$k->alamat}}</td>  
                         <td>{{$k->jabatan}}</td>                      
 						<td>{{$k->nik}}</td>

@@ -36,6 +36,12 @@ Route::get('/terima_dari_birojasa', function () {
 Route::get('/terima_bpk', function () {
     return view('proses_bpn.terima_bpkb');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/spk', function () {
+    return view('transaksi_finance.smk.modal.spk');
+});
 Route::get('/pengajuan_smk', function () {
     return view('transaksi_finance.smk.pengajuan_smk');
 });
