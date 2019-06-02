@@ -8,46 +8,47 @@
         </button>
       </div>
       <div class="modal-body">
-      <form>
+      <form method="post" action="{{url('add_jabatan')}}">
+      @csrf
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
+    <input name="nama" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nik</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nik ">
+    <input type="text" name="nik" class="form-control" id="exampleFormControlInput1" placeholder="Nik ">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Jabatan</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>manager</option>
-      <option>sales</option>
-      <option>spv</option>
-      <option>admin</option>
-      <option>branch Manager</option>
-      <option>super admin</option>
-      <option>area manager</option>
-      <option>general manager </option>
-      <option>owner</option>
+    <select class="form-control" name="jabatan" id="exampleFormControlSelect1">
+      <option value="manager">manager</option>
+      <option value="sales">sales</option>
+      <option value="supervisor">spv</option>
+      <option value="admin">admin</option>
+      <option value="bm">branch Manager</option>
+      <option value="super_admin">super admin</option>
+      <option value="area_manager">area manager</option>
+      <option value="gm">general manager </option>
+      <option value="owner">owner</option>
     </select>
   </div>   
   <div class="form-group">     
     <label for="exampleFormControlSelect1">Role</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>nasional</option>
-      <option>regional</option>
-      <option>cabang</option>
-      <option>supervisor</option>
-      <option>admin</option>
-      <option>cso/cs</option>
+    <select class="form-control" name="role" id="exampleFormControlSelect1">
+      <option value="nasional">nasional</option>
+      <option value="regional">regional</option>
+      <option value="cabang">cabang</option>
+      <option value="supervisor">supervisor</option>
+      <option value="admin">admin</option>
+      <option value="cso_cs">cso/cs</option>
     </select>
   </div>
-</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+      </form>
+
     </div>
   </div>
 </div>

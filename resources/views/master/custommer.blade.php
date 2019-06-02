@@ -59,9 +59,6 @@
             </div>
         </div>
     </div>     
-@include('master.modal.view_custommer')
-@include('master.modal.edit_custommer')
 @include('master.modal.add_custommer')
-@include('delete_modal')
 
 @endsection

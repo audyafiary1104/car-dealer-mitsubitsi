@@ -40,8 +40,11 @@ class SmkController extends Controller {
     }
 
     public function add_jabatan(Request $request) {
-        DB::table('master_jabatan')->insert([
-
+        DB::table('jabatans')->insert([
+            'nama_jabatan' => $request->jabatan,
+            'role' => $request->role,
+            'nama' => $request->nama,
+            'nik' => $request->nik
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
@@ -71,6 +74,10 @@ class SmkController extends Controller {
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
+    }
+    public function custommer_index()
+    {
+       return view('master.custommer');        
     }
 
     public function product(Request $request) {
