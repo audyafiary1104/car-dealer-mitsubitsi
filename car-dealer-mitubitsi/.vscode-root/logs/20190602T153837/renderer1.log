@@ -1,0 +1,2 @@
+[2019-06-02 15:39:00.896] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2019-06-02 15:40:27.452] [renderer1] [error] Error: Error: ENOENT: no such file or directory, stat '/home/audy/car-dealer-mitsubitsi/.vscode'

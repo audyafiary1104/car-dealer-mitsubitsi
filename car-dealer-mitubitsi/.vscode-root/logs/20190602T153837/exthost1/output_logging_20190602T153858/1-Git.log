@@ -1,0 +1,89 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/audy/car-dealer-mitsubitsi
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :.env
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/SmkController.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :database/migrations/2019_05_28_042403_create_jabatans_table.php
+> git show :app/Http/Controllers/SmkController.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git check-ignore -z --stdin
+> git show :routes/web.php
+> git check-ignore -z --stdin
+> git show :app/Http/Controllers/SmkController.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :app/Http/Controllers/SmkController.php
+> git show :resources/views/master/product.blade.php
+> git check-ignore -z --stdin
+> git show :resources/views/master/modal/tambah_karyawan.blade.php
+> git show :resources/views/master/departement.blade.php
+> git show :resources/views/master/custommer.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git check-ignore -z --stdin
+> git show :routes/web.php
+> git show :app/Http/Controllers/SmkController.php
+> git show :routes/web.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :routes/web.php
+> git show :resources/views/master/custommer.blade.php
+> git show :resources/views/layouts/admin/master.blade.php
+> git check-ignore -z --stdin
+> git show :resources/views/master/custommer.blade.php
+> git show :app/Http/Controllers/SmkController.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :routes/web.php
+> git show :resources/views/layouts/app.blade.php
+> git show :resources/views/layouts/admin/master.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :routes/web.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :routes/web.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :routes/web.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/custommer.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :resources/views/master/modal/jabatan.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php
+> git show :routes/web.php
+> git show :resources/views/master/custommer.blade.php
+> git show :resources/views/master/modal/add_custommer.blade.php

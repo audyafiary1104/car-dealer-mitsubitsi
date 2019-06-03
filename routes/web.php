@@ -10,14 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/Customer', 'SmkController@custommer_index');
 Route::get('/karyawan','SmkController@karyawan');
 Route::get('/karyawan/del/{id}','SmkController@delete_karyawan');
 Route::post('/post_login','UserController@login');
 Route::get('/pengajuan','SmkCOntroller@pengajuan');
 Route::post('tambah_karyawan','SmkController@add_karyawan');
 Route::post('add_custommer','SmkController@add_custommer');
-
+Route::post('add_jabatan','SmkController@add_jabatan');
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('/admin', function () {
@@ -35,6 +35,12 @@ Route::get('/terima_dari_birojasa', function () {
 });
 Route::get('/terima_bpk', function () {
     return view('proses_bpn.terima_bpkb');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/spk', function () {
+    return view('transaksi_finance.smk.modal.spk');
 });
 Route::get('/pengajuan_smk', function () {
     return view('transaksi_finance.smk.pengajuan_smk');
@@ -74,9 +80,6 @@ Route::get('/jabatan', function () {
 });
 Route::get('/Departement', function () {
     return view('master.departement');
-});
-Route::get('/Customer', function () {
-    return view('master.custommer');
 });
 
 Route::get('/Product', function () {

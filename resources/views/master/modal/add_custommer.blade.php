@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form action="{{url('add_custommer')}}">
+      <form  method="POST"action="{{url('add_custommer')}}">
       @csrf
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama</label>
@@ -24,7 +24,7 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tanggal Lahir</label>
-    <input type="text" name="tanggal_lahir" class="form-control" id="exampleFormControlInput1" placeholder="Tanggal Lahir">
+    <input type="date" name="tanggal_lahir" class="form-control" id="exampleFormControlInput1" placeholder="dd/mm/yy">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Alamat</label>
@@ -66,7 +66,7 @@
   </div>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">ADD</button>
+        <button type="submit" class="btn btn-secondary">ADD</button>
       </div>
       </form>
     </div>
