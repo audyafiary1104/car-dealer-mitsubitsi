@@ -4,13 +4,12 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-5">
-						<h2>Master <b>Karyawan</b></h2>
-					</div>
-					<div class="col-sm-7">
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_karyawan"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploud_excel"><i class="material-icons">&#xE24D;</i> <span>Import Via Excel</span></button>						
-					</div>
+                <div class="col-sm-8"><h2>Master <b>Karyawan</b></h2></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#tambah_karyawan"><i class="fa fa-plus"></i> Add Karyawan</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#uploud_excel"><i class="fa fa-plus"></i> Import Excel</button>
+                    </div>
+
                 </div>
             </div>
             <table class="table table-striped table-hover">

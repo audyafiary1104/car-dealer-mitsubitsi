@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-8"><h2>Master <b>Jabatan</b></h2></div>
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#modal_jabatan"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#modal_jabatan"><i class="fa fa-plus"></i> Add Jabatan</button>
                     </div>
                 </div>
             </div>

@@ -91,5 +91,11 @@ Route::get('/Product', function () {
 Route::get('/master_biaya', function () {
     return view('master.biaya');
 });
+Route::get('/Cabang', function () {
+    return view('master.cabang');
+});
+Route::get('/Level_Jabatan', function () {
+    return view('master.level_jabatan');
+});
 
 

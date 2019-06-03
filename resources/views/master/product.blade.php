@@ -4,17 +4,17 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
 						<h2>Master <b>Product</b></h2>
 					</div>
-					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
-						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Import Excel</span></a>						
-					</div>
-                        <div class="search-box">
+					<div class="search-box mt-1">
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
+					<div class="col-sm-4">
+						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Product</span></a>
+						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Import Excel</span></a>						
+					</div>
                 </div>
             </div>
             <table class="table table-striped table-hover">
