@@ -18,6 +18,9 @@ Route::get('/pengajuan','SmkCOntroller@pengajuan');
 Route::post('tambah_karyawan','SmkController@add_karyawan');
 Route::post('add_custommer','SmkController@add_custommer');
 Route::post('add_jabatan','SmkController@add_jabatan');
+Route::post('add_dpt','SmkController@add_dpt');
+Route::post('add_biaya','SmkController@biaya');
+
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('/admin', function () {
@@ -85,7 +88,7 @@ Route::get('/Departement', function () {
 Route::get('/Product', function () {
     return view('master.product');
 });
-Route::get('/biaya', function () {
+Route::get('/master_biaya', function () {
     return view('master.biaya');
 });
 

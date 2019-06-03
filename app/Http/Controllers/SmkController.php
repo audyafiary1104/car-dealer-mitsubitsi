@@ -68,7 +68,7 @@ class SmkController extends Controller {
         return redirect()->back();
     }
 
-    public function departement(Request $request) {
+    public function add_dpt(Request $request) {
         DB::table('master_departement')->insert([
            'nama_dpt' => $request->nama_dpt
         ]);
@@ -93,13 +93,11 @@ class SmkController extends Controller {
     }
 
     public function biaya(Request $request) {
-      $this->validate($request, [
-         'file' => 'required|mimes:xls,xlsx'
-     ]);
-
-     if ($request->hasFile('file')) {
-         $file = $request->file('file'); //GET FILE
-         Excel::import(new BiayaImport, $file); //IMPORT FILE
+        // dd($request->file);
+     if ($file = $request->file) {
+        $nama_file = rand().$file->getClientOriginalName();
+		$file->move('masterbiaya',$nama_file);
+         Excel::import(new BiayaImport,  public_path('/masterbiaya/'.$nama_file)); //IMPORT FILE
          Alert::success('Success', 'Data berhasil ditambahkan');
 
          return redirect()->back();

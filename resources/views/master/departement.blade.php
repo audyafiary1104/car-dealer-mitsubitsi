@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-sm-8"><h2>Master <b>Departement</b></h2></div>
                     <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#dpt"><i class="fa fa-plus"></i> Add New</button>
                     </div>
                     <div class="col-sm-4">
                         <div class="search-box">
@@ -50,6 +50,5 @@
             </div>
         </div>
     </div>     
-
-
+    @include('master.modal.add_dpt')
 @endsection
