@@ -52,10 +52,20 @@
                             </li>
                             <li>
                                 <a class="sidenav-item-link" href="{{url('biaya')}}">
-                                    <span class="nav-text">Master biaya</span>
+                                    <span class="nav-text">Master Biaya</span>
                                 </a>
                             </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('Cabang')}}">
+                                    <span class="nav-text">Master Cabang</span>
 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('Level_Jabatan')}}">
+                                    <span class="nav-text">Master Level Jabatan</span>
+                                </a>
+                            </li>
                         </div>
                     </ul>
                 </li>

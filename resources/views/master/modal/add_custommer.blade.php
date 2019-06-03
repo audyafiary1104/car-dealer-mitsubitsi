@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Detail Custommer</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Custommer</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -20,7 +20,7 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tempat Lahir</label>
-    <input type="text" name="tempat_lahir class="form-control" id="exampleFormControlInput1" placeholder="Tempat Lahir">
+    <input type="text" name="tempat_lahir" class="form-control" id="exampleFormControlInput1" placeholder="Tempat Lahir">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tanggal Lahir</label>

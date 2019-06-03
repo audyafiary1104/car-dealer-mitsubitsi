@@ -4,7 +4,7 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6"><h2>Master <b>Custommer</b></h2></div>
+                    <div class="col-sm-6"><h2>Master <b>Level Jabatan</b></h2></div>
                     <div class="col-sm-3">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
@@ -12,33 +12,25 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add Customer</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_level_jabatan"><i class="fa fa-plus"></i> Add Level Jabatan</button>
                     </div>
                 </div>
             </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>Kode Custommer</th>
-                        <th>nama</th>
-                        <th>Alamat</th>
-                        <th>Kota</th>
-                        <th>Kode Pos</th>
-                        <th>Nik</i></th>
-                        <th>Actions</th>
+                        <th>Kode Level Jabatan</th>
+                        <th>Nama Level Jabatan</th>
+                        <th>Actons</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                     <td>CST0001</td>
                         <td>Thomas Hardy</td>
-                        <td>almat</td>
-                        <td>89 Chiaroscuro Rd.</td>
-                        <td>Portland</td>
-                        <td>97219</td>
                         <td>
-							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_custommer"><i class="material-icons">&#xE417;</i></a>
-                            <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
+							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_level_jabatan"><i class="material-icons">&#xE417;</i></a>
+                            <button href="#level_jabatan_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
@@ -59,9 +51,9 @@
             </div>
         </div>
     </div>     
-@include('master.modal.view_custommer')
-@include('master.modal.edit_custommer')
-@include('master.modal.add_custommer')
+@include('master.modal.view_level_jabatan')
+@include('master.modal.edit_level_jabatan')
+@include('master.modal.add_level_jabatan')
 @include('delete_modal')
 
 @endsection
