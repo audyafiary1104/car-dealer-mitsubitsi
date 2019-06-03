@@ -8,19 +8,15 @@
         </button>
       </div>
       <div class="modal-body">
-      <form action="{{url('add_cabang')}}">
+      <form action="{{url('add_cabang')}}" method="post">
       @csrf
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Kode Cabang</label>
-    <input type="text" name="kode_cabang" class="form-control" id="exampleFormControlInput1" placeholder="kode_cabang">
-  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama Cabang</label>
     <input type="text" name="nama_cabang" class="form-control" id="exampleFormControlInput1" placeholder="nama_cabang">
   </div>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">ADD</button>
+        <button type="submit" class="btn btn-secondary">ADD</button>
       </div>
       </form>
     </div>

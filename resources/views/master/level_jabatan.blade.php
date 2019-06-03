@@ -51,9 +51,10 @@
             </div>
         </div>
     </div>     
+    @include('master.modal.add_level_jabatan')
+
 @include('master.modal.view_level_jabatan')
 @include('master.modal.edit_level_jabatan')
-@include('master.modal.add_level_jabatan')
-@include('delete_modal')
+
 
 @endsection

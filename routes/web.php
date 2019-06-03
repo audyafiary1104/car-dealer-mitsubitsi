@@ -20,6 +20,8 @@ Route::post('add_custommer','SmkController@add_custommer');
 Route::post('add_jabatan','SmkController@add_jabatan');
 Route::post('add_dpt','SmkController@add_dpt');
 Route::post('add_biaya','SmkController@biaya');
+Route::post('add_level_jabatan','SmkController@add_lv_jbt');
+Route::post('add_cabang','SmkController@add_cabang');
 
 Route::group(['middleware' => 'auth'], function()
 {

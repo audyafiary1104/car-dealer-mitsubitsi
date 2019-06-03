@@ -51,9 +51,6 @@
             </div>
         </div>
     </div>     
-@include('master.modal.view_cabang')
-@include('master.modal.edit_cabang')
 @include('master.modal.add_cabang')
-@include('delete_modal')
 
 @endsection

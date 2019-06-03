@@ -105,5 +105,21 @@ class SmkController extends Controller {
         Alert::error('Error', 'Data Tidak Berhasil ditambahkan');
         return redirect()->back();
     }
+    public function add_lv_jbt(Request $request)
+    {
+        DB::table('master_level_jabatan')->insert([
+            'nama' =>$request->nama_level_jabatan
+        ]);
+        Alert::success('Success', 'Data berhasil ditambahkan');
+        return redirect()->back();
+    }
     
+    public function add_cabang(Request $request)
+    {
+        DB::table('master_cabang')->insert([
+            'nama' =>$request->nama_cabang
+        ]);
+        Alert::success('Success', 'Data berhasil ditambahkan');
+        return redirect()->back();
+    }
 }

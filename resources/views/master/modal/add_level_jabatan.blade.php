@@ -8,19 +8,15 @@
         </button>
       </div>
       <div class="modal-body">
-      <form action="{{url('add_level_jabatan')}}">
+      <form action="{{url('add_level_jabatan')}}" method="post">
       @csrf
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Kode Level Jabatan</label>
-    <input type="text" name="kode_level_jabatan" class="form-control" id="exampleFormControlInput1" placeholder="Kode Level Jabatan">
-  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama Level Jabatan</label>
     <input type="text" name="nama_level_jabatan" class="form-control" id="exampleFormControlInput1" placeholder="Nama Level Jabatan">
   </div>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">ADD</button>
+        <button type="submit" class="btn btn-secondary">ADD</button>
       </div>
       </form>
     </div>
