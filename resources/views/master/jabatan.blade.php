@@ -15,21 +15,25 @@
                 <thead>
                     <tr>
                         <th>Kode</th>
+                        <th>nama</th>
                         <th>Jabatan</th>
                         <th>Role</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($jabatan as $jb)
                     <tr>
                         <td>JBT0001</td>
-                        <td>Admin</td>
-                        <td>admin</td>
+                        <td>{{$jb->nama}}</td>
+                        <td>{{$jb->nama_jabatan}}</td>
+                        <td>{{$jb->role}}</td>
                         <td>
                             <button type="button" class="edit" title="Edit" data-toggle="modal" data-target="#edit_jabatan"><i class="material-icons">&#xE254;</i></button>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

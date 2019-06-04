@@ -33,19 +33,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($biaya as $b)
                     <tr>
-                        <td>621.10.01</td>
-                        <td>GAJI & UPAH</td>
-                        <td>BIAYA</td>
-                        <td>5</td>
-                        <td>Detail GL</td>
-                        <td>5</td>
+                        <td>{{$b->kode_gl}}</td>
+                        <td>{{$b->nama_gl}}</td>
+                        <td>{{$b->type_gl}}</td>
+                        <td>{{$b->level_gl}}</td>
+                        <td>{{$b->group_gl}}</td>
+                        <td>{{$b->linnk_gl}}</td>
                         <td>
                             <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
-                            <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+							<a href="/master_biaya/del/{{$b->id}}" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
             <div class="clearfix">

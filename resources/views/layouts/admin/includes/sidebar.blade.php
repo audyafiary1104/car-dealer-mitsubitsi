@@ -51,7 +51,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('biaya')}}">
+                                <a class="sidenav-item-link" href="{{url('master_biaya')}}">
                                     <span class="nav-text">Master Biaya</span>
                                 </a>
                             </li>

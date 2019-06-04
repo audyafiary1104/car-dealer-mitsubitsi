@@ -122,4 +122,21 @@ class SmkController extends Controller {
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
+    public function master_biaya()
+    {
+        $biaya = DB::table('master_biaya')->get();
+        return view('master.biaya',compact('biaya'));
+    }
+    public function del_biaya($id)
+    {
+       $del = DB::table('master_biaya')->where('id',$id);
+       $del->delete();
+       Alert::success('Success', 'Data berhasil DIHAPUS');
+       return redirect()->back();
+    }
+    public function master_jabatan()
+    {
+        $jabatan = DB::table('jabatans')->get();
+        return view('master.jabatan',compact('jabatan'));
+    }
 }
