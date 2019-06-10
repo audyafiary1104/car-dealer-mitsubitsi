@@ -25,16 +25,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($lv_jbt as $level_jabatan)
                     <tr>
                     <td>CST0001</td>
-                        <td>Thomas Hardy</td>
+                        <td>{{$level_jabatan->nama}}</td>
                         <td>
-							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_level_jabatan"><i class="material-icons">&#xE417;</i></a>
                             <button href="#level_jabatan_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
             <div class="clearfix">
@@ -52,9 +52,7 @@
         </div>
     </div>     
     @include('master.modal.add_level_jabatan')
-
-@include('master.modal.view_level_jabatan')
-@include('master.modal.edit_level_jabatan')
+    @include('master.modal.edit_level_jabatan')
 
 
 @endsection

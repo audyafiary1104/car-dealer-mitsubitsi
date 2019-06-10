@@ -77,9 +77,19 @@ class SmkController extends Controller {
     }
     public function custommer_index()
     {
-       return view('master.custommer');        
+        $cust = DB::table('master_custommer')->get();
+       return view('master.custommer',compact('cust'));        
     }
-
+    public function departement_index()
+    {
+        $dpt = DB::table('master_departement')->get();
+        return view('master.departement',compact('dpt'));
+    }
+    public function cabang_index()
+    {
+        $cbg = DB::table('master_cabang')->get();
+    return view('master.cabang',compact('cbg'));
+    }
     public function product(Request $request) {
         DB::table('master_product')->insert([
          'nomer_rangka'=> $request->nomer_rangka,
@@ -117,13 +127,15 @@ class SmkController extends Controller {
     public function add_cabang(Request $request)
     {
         DB::table('master_cabang')->insert([
-            'nama' =>$request->nama_cabang
+            'nama_cabang' =>$request->nama_cabang
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
+    
     public function master_biaya()
     {
+        
         $biaya = DB::table('master_biaya')->get();
         return view('master.biaya',compact('biaya'));
     }
@@ -138,5 +150,10 @@ class SmkController extends Controller {
     {
         $jabatan = DB::table('jabatans')->get();
         return view('master.jabatan',compact('jabatan'));
+    }
+    public function lv_jbt()
+    {
+        $lv_jbt = DB::table('jabatans')->get();
+        return view('master.level_jabatan',compact('lv_jbt'));
     }
 }

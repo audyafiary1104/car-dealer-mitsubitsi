@@ -25,16 +25,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($cbg as $cabang)
                     <tr>
                     <td>CST0001</td>
-                        <td>Thomas Hardy</td>
+                        <td>{{$cabang->nama_cabang}}</td>
                         <td>
 							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_cabang"><i class="material-icons">&#xE417;</i></a>
                             <button href="#cabang_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
             <div class="clearfix">

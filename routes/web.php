@@ -25,7 +25,10 @@ Route::post('add_cabang','SmkController@add_cabang');
 Route::get('/master_biaya', 'SmkController@master_biaya');
 Route::get('/jabatan', 'SmkController@master_jabatan');
 Route::get('master_biaya/del/{id}','SmkController@del_biaya');
-
+Route::get('/Departement', 'SmkController@departement_index');
+Route::get('/Cabang', 'SmkController@cabang_index');
+Route::get('/Level_Jabatan', 'SmkController@lv_jbt');
+Route::post('add_psmk','TransaksiController@pengajuan');
 Route::group(['middleware' => 'auth'], function()
 {
     Route::get('/admin', function () {
@@ -84,18 +87,8 @@ Route::get('/terima_barang_dari_suplier', function () {
     return view('transaksi_pembelian.terima_barang_dari_suplier');
 });
 
-Route::get('/Departement', function () {
-    return view('master.departement');
-});
-
 Route::get('/Product', function () {
     return view('master.product');
-});
-Route::get('/Cabang', function () {
-    return view('master.cabang');
-});
-Route::get('/Level_Jabatan', function () {
-    return view('master.level_jabatan');
 });
 
 

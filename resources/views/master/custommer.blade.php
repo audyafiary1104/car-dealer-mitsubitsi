@@ -22,27 +22,27 @@
                         <th>Kode Custommer</th>
                         <th>nama</th>
                         <th>Alamat</th>
-                        <th>Kota</th>
+                        <th>provinsi</th>
                         <th>Kode Pos</th>
                         <th>Nik</i></th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($cust as $customer)
                     <tr>
                     <td>CST0001</td>
-                        <td>Thomas Hardy</td>
-                        <td>almat</td>
-                        <td>89 Chiaroscuro Rd.</td>
-                        <td>Portland</td>
-                        <td>97219</td>
+                        <td>{{$customer->nama}}</td>
+                        <td>{{$customer->alamat}}</td>
+                        <td>{{$customer->provinsi}}</td>
+                        <td>{{$customer->kode_pos}}</td>
+                        <td>{{$customer->nik}}</td>
                         <td>
-							<button type="button" class="view" title="View" data-toggle="modal" data-target="#view_custommer"><i class="material-icons">&#xE417;</i></a>
                             <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
             <div class="clearfix">

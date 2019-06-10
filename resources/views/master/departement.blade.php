@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add Departement</button>
+                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#dpt"><i class="fa fa-plus"></i> Add Departement</button>
                     </div>        
                 </div>
             </div>
@@ -25,15 +25,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($dpt as $departement)
                     <tr>
                         <td>DPT0001</td>
-                        <td>sales</td>
+                        <td>{{$departement->nama_dpt}}</td>
                         <td>
                             <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
                             <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
             <div class="clearfix">
