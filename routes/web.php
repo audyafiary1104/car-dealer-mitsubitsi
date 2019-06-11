@@ -78,7 +78,7 @@ Route::get('/konfirmasi_biaya', function () {
     return view('transaksi_finance.biaya.konfirmasi_biaya');
 });
 Route::get('/konfirmasi_smk_atasan', function () {
-    return view('transaksi_finance.smk.konfirmasi_smk');
+    return view('transaksi_finance.smk.konfirmasi_smk_atasan');
 });
 Route::get('/', function () {
     return view('login');

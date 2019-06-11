@@ -5,12 +5,9 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-8">
-						<h2>Konfirmasi <b>Smk</b>Oleh atasan</h2>
+						<h2>Konfirmasi <b>Smk </b>Oleh BM</h2>
 					</div>
-					<div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#tambah_smk"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
-                </div>
+				</div>
             </div>
             <table class="table table-striped table-hover">
                 <thead>
@@ -34,10 +31,10 @@
                         <td>Samuel</td>
                         <td>Credit</td>
                         <td>RP.1.000.000.00</td>
-
                         <td>
                         <button type="button" class="btn btn-success">Setuju</button>
-                        <button type="button" class="btn btn-danger">Tidak</button>
+                        <button type="button" class="btn btn-danger">Tidak Setuju</button>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#lempar_smk_bm">Lempar</button>
                         </td>
                     </tr>
                    
@@ -79,5 +76,6 @@
 			</div>
 		</div>
 	</div>
-    @include('transaksi_finance.smk.modal.tambah_psmk')
+    
+    @include('transaksi_finance.smk.modal.lempar_smk_bm')
 @endsection
