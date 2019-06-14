@@ -31,6 +31,8 @@ Route::get('/Level_Jabatan', 'SmkController@lv_jbt');
 Route::post('add_psmk','TransaksiController@pengajuan');
 Route::get('/pengajuan_smk','TransaksiController@pengajuan_index');
 Route::get('/pengajuan_smk/del/{id}','TransaksiController@pengajuan_del');
+Route::get('/konfirmasi_smk_atasan','TransaksiController@confirm_spv');
+Route::get('/konfirmasi_smk_atasan/setuju/{id}','TransaksiController@setuju_spv');
 
 Route::group(['middleware' => 'auth'], function()
 {
@@ -56,6 +58,7 @@ Route::get('/profile', function () {
 Route::get('/spk', function () {
     return view('transaksi_finance.smk.modal.spk');
 });
+
 Route::get('/buat_spk', function () {
     return view('buat_spk');
 });
@@ -76,9 +79,6 @@ Route::get('/pengajuan_biaya', function () {
 });
 Route::get('/konfirmasi_biaya', function () {
     return view('transaksi_finance.biaya.konfirmasi_biaya');
-});
-Route::get('/konfirmasi_smk_atasan', function () {
-    return view('transaksi_finance.smk.konfirmasi_smk_atasan');
 });
 Route::get('/', function () {
     return view('login');

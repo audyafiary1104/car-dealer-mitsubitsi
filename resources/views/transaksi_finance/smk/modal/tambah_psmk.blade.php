@@ -43,10 +43,20 @@
     <label for="exampleFormControlInput1">warna</label>
     <input type="text" class="form-control" name="warna" id="exampleFormControlInput1" placeholder="Nama">
   </div>   
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Nama Sales</label>
-    <input type="text" class="form-control" name="nama_sales" id="exampleFormControlInput1" placeholder="Nama">
-  </div>  
+  <div class="form-group">     
+    <label for="exampleFormControlSelect1">Nama Sales</label>
+    @if($sales == null)
+    <select class="form-control" name="id_sales" id="exampleFormControlSelect1">
+      <option disabled value="">Input Sales Terlebih dahulu</option>
+    </select>
+    @else
+    @foreach($sales as $s)
+    <select class="form-control" name="id_sales" id="exampleFormControlSelect1">
+      <option value="{{$s->id}}|{{$s->nama}}">{{$s->nama}}</option>
+    </select>
+    @endforeach
+    @endif
+  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tanda Jadi Rp</label>
     <input type="number" class="form-control" name="nilai_versekot" id="exampleFormControlInput1" placeholder="Nama">

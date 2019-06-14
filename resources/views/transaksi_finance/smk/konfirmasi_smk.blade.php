@@ -9,22 +9,21 @@
 					</div>
 				</div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-						
+
                         <th>No Smk</th>
                         <th>Nama Peminat</th>
 						<th>Address</th>
                         <th>Nama Sales</th>
                         <th>Pembayaran</th>
                         <th>Harga</th>
-                        <th>Actions</th>
+                        <th><center>Actions</center></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-					
                         <td>SMK0001</td>
                         <td>Audy Afiary</td>
 						<td>89 Chiaroscuro Rd, Portland, USA</td>
@@ -32,12 +31,13 @@
                         <td>Credit</td>
                         <td>RP.1.000.000.00</td>
                         <td>
-                        <button type="button" class="btn btn-success">Setuju</button>
-                        <button type="button" class="btn btn-danger">Tidak Setuju</button>
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#lempar_smk_bm">Lempar</button>
+                        <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-check-square-o fa-lg" style="text-shadow:1px 1px 3px black;color:springgreen;margin-left:10px" data-toggle="tooltip" title="Setuju"></i></a>
+                        <a href="#" data-toggle="modal" data-target="#deleteEmployeeModal"><i class="fa fa-times-circle-o fa-lg" style="text-shadow:1px 1px 3px black;color:#FF0000" data-toggle="tooltip" title="Tidak Setuju"></i></a>
+                        <a href="#" data-toggle="modal" data-target="#lempar_smk_bm"><i class="fa fa-mail-reply-all fa-lg" style="text-shadow:1px 1px 3px black;color:blue" data-toggle="tooltip" title="Lempar"></i></a>
+
                         </td>
                     </tr>
-                   
+
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -60,11 +60,11 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
-					<div class="modal-header">						
+					<div class="modal-header">
 						<h4 class="modal-title">Delete Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">
 						<p>Are you sure you want to delete these Records?</p>
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
@@ -76,6 +76,5 @@
 			</div>
 		</div>
 	</div>
-    
-    @include('transaksi_finance.smk.modal.lempar_smk_bm')
+
 @endsection

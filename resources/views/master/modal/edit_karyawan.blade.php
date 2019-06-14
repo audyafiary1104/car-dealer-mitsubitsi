@@ -15,15 +15,15 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nik</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0000 ">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Email</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@gmail.com ">
   </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary" style="box-shadow:1px 1px 4px black">Save changes</button>
       </div>
       </form>
     </div>

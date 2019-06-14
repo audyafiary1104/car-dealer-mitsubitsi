@@ -24,7 +24,7 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tanggal Lahir</label>
-    <input type="date" name="tanggal_lahir" class="form-control" id="exampleFormControlInput1" placeholder="dd/mm/yy">
+    <input type="date" name="tanggal_lahir" class="form-control" id="exampleFormControlInput1" placeholder="DD/MM/YY">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Alamat</label>
@@ -66,7 +66,11 @@
   </div>
         </div>
       <div class="modal-footer">
+<<<<<<< HEAD
         <button type="submit" class="btn btn-secondary">ADD</button>
+=======
+        <button type="submit" class="btn btn-primary" style="box-shadow:2px 2px 4px black">ADD</button>
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
       </div>
       </form>
     </div>

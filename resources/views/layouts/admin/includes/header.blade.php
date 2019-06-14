@@ -14,7 +14,6 @@
         </div>
 
         <div class="navbar-right ">
-            
                 <li class="dropdown user-menu">
                     <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         {{-- <img src="assets/img/user/user.png" class="user-image" alt="User Image" /> --}}

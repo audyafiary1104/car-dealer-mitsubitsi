@@ -1,15 +1,28 @@
 @extends('layouts.admin.master')
+<<<<<<< HEAD
 @section('content') 
+=======
+@section('content')
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
 <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
+<<<<<<< HEAD
                     <div class="col-sm-8"><h2>Konfirmasi <b>Biaya</b></h2></div>
                     <div>
                         <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
                     </div>
                     <div class="col-sm-4">
                         <div class="search-box">
+=======
+                    <div class="col-sm-4" style="margin-bottom:10px;"><h2>Konfirmasi <b>Biaya</b></h2></div>
+                    <div class="col-sm-8">
+                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-100px;margin-left:560px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add Customer</button>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="search-box" style="margin-right:375px;width:65%;">
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
@@ -23,7 +36,11 @@
                         <th>Tanggal</th>
                         <th>Nama Suplier</th>
                         <th>Dikeluarkan Dari</th>
+<<<<<<< HEAD
                         <th>Actions</th>
+=======
+                        <th class="text-center">Actions</th>
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                     </tr>
                 </thead>
                 <tbody>
@@ -34,11 +51,19 @@
                         <td>KAS BESAR</td>
 
                         <td>
+<<<<<<< HEAD
                         <button href="#myModal" class="btn btn-danger" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip">Detail</button><br>
                             <button href="#myModal" class="btn btn-success" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip">Konfirmasi</button>
                         </td>
                     </tr>
                    
+=======
+                        <a href="#" style="margin-left:21%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
+                        <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-check-square-o fa-lg" style="text-shadow:1px 1px 3px black;color:springgreen;margin-left:10px" data-toggle="tooltip" title="Konfirmasi"></i></a>
+                        </td>
+                    </tr>
+
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                 </tbody>
             </table>
             <div class="clearfix">
@@ -54,7 +79,14 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
     </div>     
 
 
 @endsection
+=======
+    </div>
+
+
+@endsection
+>>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c

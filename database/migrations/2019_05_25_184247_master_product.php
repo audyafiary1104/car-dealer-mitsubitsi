@@ -16,6 +16,7 @@ class MasterProduct extends Migration
         Schema::create('master_product', function (Blueprint $table) {
             $table->increments("id");
             $table->string("nomer_rangka", 50)->unique();
+            $table->string("nama");
             $table->string("suplier");
             $table->string("warna");
             $table->string("type");

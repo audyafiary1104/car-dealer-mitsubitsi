@@ -7,15 +7,15 @@
                     <div class="col-sm-8">
 						<h2>Buat <b>Spk</b></h2>
 					</div>
-					<div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#tambah_smk"><i class="fa fa-plus"></i> Add New</button>
+					<div class="col-sm-12">
+                        <button type="button" style="margin-left:940px;box-shadow:1px 1px 3px black;" class="btn btn-info add-new"  data-toggle="modal" data-target="#tambah_smk"><i class="fa fa-plus"></i> Add Jabatan</button>
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-						
+
                         <th>No Transaksi</th>
                         <th>No Smk</th>
                         <th>Nama</th>
@@ -23,12 +23,11 @@
                         <th>Ktp</th>
                         <th>Type Kendaraan</th>
                         <th>Pembayaran</th>
-                        <th>Actions</th>
+                        <th><center>Actions</center></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-					
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
                         <td>Audy Afiary</td>
@@ -38,11 +37,11 @@
                         <td>Tunai</td>
 
                         <td>
-                        <button type="button" class="btn btn-success">Cetak</button>
-                        <button type="button" class="btn btn-danger">Liat Detail</button>
+                            <a href="#" style="margin-left:28%;" data-toggle="modal" data-target="#edit_jabatan"><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
+                            <a href="#" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
                         </td>
                     </tr>
-                   
+
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -65,11 +64,11 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
-					<div class="modal-header">						
+					<div class="modal-header">
 						<h4 class="modal-title">Delete Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">
 						<p>Are you sure you want to delete these Records?</p>
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>

@@ -1,15 +1,15 @@
 @extends('layouts.admin.master')
-@section('content') 
+@section('content')
 <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Serah terima stnk</h2></div>
-                    <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add New</button>
+                    <div class="col-sm-4" style="margin-bottom:10px;"><h2>Serah Terima Stnk</h2></div>
+                    <div class="col-sm-8">
+                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-100px;margin-left:560px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add Customer</button>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="search-box">
+                    <div class="col-sm-12">
+                        <div class="search-box" style="margin-right:375px;width:65%;">
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
@@ -19,13 +19,13 @@
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                    <th>no spk</th>
-                        <th>no customer</th>
+                        <th>No Spk</th>
+                        <th>No Customer</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Type Kendaraan</th>
-                        <th>No stnk</th>        
-                        <th>Actions</th>
+                        <th>No stnk</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,11 +37,11 @@
                         <td>BY0001</td>
                         <td>Kas Besar</td>
                         <td>
-                            <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
-                            <button href="#myModal" class="trigger-btn" data-toggle="modal" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></button>
+                            <a href="#" style="margin-left:28%;" class="edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="color:aqua;text-shadow:1px 1px 3px black"data-toggle="tooltip" title="Edit"></i></a>
+                            <a href="#"class="delete" title="Delete" ><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
                         </td>
                     </tr>
-                   
+
                 </tbody>
             </table>
             <div class="clearfix">
@@ -57,7 +57,7 @@
                 </ul>
             </div>
         </div>
-    </div>     
+    </div>
 
 
 @endsection

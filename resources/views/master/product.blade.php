@@ -4,49 +4,49 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4"style="margin-bottom:-10px;">
 						<h2>Master <b>Product</b></h2>
 					</div>
-					<div class="search-box mt-1">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
-					<div class="col-sm-4">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Product</span></a>
-						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Import Excel</span></a>						
+					<div class="col-sm-12" style="margin-left:790px">
+						<a href="#addEmployeeModal" class="btn btn-info" style="box-shadow:1px 1px 3px black;margin-bottom:-50px;" data-toggle="modal"><i class="fa fa-plus fa-lg"></i> <span>Add Product</span></a>
+						<a href="#" class="btn btn-info" style="box-shadow:1px 1px 3px black;margin-bottom:-50px;margin-left:10px;"><i class="fa fa-folder fa-lg"></i> <span>Import Excel</span></a>
 					</div>
+					<div class="search-box col-sm-8">
+                            <i class="material-icons" style="margin-left:15px;">&#xE8B6;</i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                    </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-bordered table-hover">
                 <thead>
-                    <tr>
-					<th>Kode Barang</th>
-                        <th>Nomer Rangka</th>
-						<th>Nama</th>
-						<th>Suplier</th>
-						<th>Warna</th>
-                        <th>Type</th>						
-                        <th>Minimum Stock</th>
-                        <th>Non aktif</th>
-                        <th>Actions</th>
+                    <tr class="bg-primary">
+						<th class="text-white">Kode Barang</th>
+                        <th class="text-white">Nomer Rangka</th>
+						<th class="text-white">Nama</th>
+						<th class="text-white">Suplier</th>
+						<th class="text-white">Warna</th>
+                        <th class="text-white">Type</th>
+                        <th class="text-white">Minimum Stock</th>
+                        <th class="text-white">Non aktif</th>
+                        <th class="text-white text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-					<td>BRG0001</td>					
+					<td>BRG0001</td>
                         <td>5344423444</td>
 						<td>Avanza</td>
 						<td>Mitsubitsi</td>
                         <td>Merah Volkadot</td>
                         <td>sedan</td>
-						<td>10</td>	
-                        <td>Aktif</td>																	
+						<td>10</td>
+                        <td>Aktif</td>
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="#editEmployeeModal" style="margin-left:28%;" class="edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="text-shadow:1px 1px 3px black" data-toggle="tooltip" title="Edit"></i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
                         </td>
                     </tr>
-                  
+
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -68,11 +68,11 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
-					<div class="modal-header">						
+					<div class="modal-header">
 						<h4 class="modal-title">Add Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">
 						<div class="form-group">
 							<label>Name</label>
 							<input type="text" class="form-control" required>
@@ -88,7 +88,7 @@
 						<div class="form-group">
 							<label>Phone</label>
 							<input type="text" class="form-control" required>
-						</div>					
+						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -103,11 +103,11 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
-					<div class="modal-header">						
+					<div class="modal-header">
 						<h4 class="modal-title">Edit Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">
 						<div class="form-group">
 							<label>Name</label>
 							<input type="text" class="form-control" required>
@@ -123,7 +123,7 @@
 						<div class="form-group">
 							<label>Phone</label>
 							<input type="text" class="form-control" required>
-						</div>					
+						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -138,11 +138,11 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
-					<div class="modal-header">						
+					<div class="modal-header">
 						<h4 class="modal-title">Delete Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
-					<div class="modal-body">					
+					<div class="modal-body">
 						<p>Are you sure you want to delete these Records?</p>
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
@@ -154,4 +154,3 @@
 			</div>
 		</div>
 	</div>
-@endsection
