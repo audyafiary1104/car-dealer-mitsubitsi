@@ -27,20 +27,20 @@
                 </thead>
                 <tbody>
                     <tr>
-					
+			@foreach($smk as $smk)
                         <td>SMK0001</td>
-                        <td>Audy Afiary</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>Samuel</td>
-                        <td>Credit</td>
-                        <td>RP.1.000.000.00</td>
+                        <td>{{$smk->nama_cust}}</td>
+						<td>{{$smk->alamat}}</td>
+                        <td>{{$smk->nama_sales}}</td>
+                        <td>{{$smk->payment}}</td>
+                        <td>{{$smk->nilai_versekot}}</td>
 
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="pengajuan_smk/del/{{$smk->id}}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
-                   
+                   @endforeach
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -57,27 +57,5 @@
             </div>
         </div>
     </div>
-
-	<!-- Delete Modal HTML -->
-	<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form>
-					<div class="modal-header">						
-						<h4 class="modal-title">Delete Employee</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">					
-						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>This action cannot be undone.</small></p>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-danger" value="Delete">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-    @include('transaksi_finance.smk.modal.tambah_psmk')
+        @include('transaksi_finance.smk.modal.tambah_psmk')
 @endsection

@@ -30,8 +30,19 @@ class TransaksiController extends Controller
             'tanggal_input' => $now
         ]);
     } 
-
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
+    }
+    public function pengajuan_index()
+    {
+       $smk = DB::table('pengajuan_smk')->get();
+       return view('transaksi_finance.smk.pengajuan_smk',compact('smk'));
+    }
+    public function pengajuan_del($id)
+    {
+        $db = DB::table('pengajuan_smk')->where('id',$id);
+        $db->delete();
+        Alert::success('Success', 'Data berhasil Dihapus');
+        return redirect()->back();        
     }
 }
