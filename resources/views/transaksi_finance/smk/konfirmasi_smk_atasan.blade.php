@@ -63,5 +63,5 @@
         </div>
     </div>
 </div>
-
+@include('transaksi_finance.smk.modal.lempar_smk_atasan')
 @endsection

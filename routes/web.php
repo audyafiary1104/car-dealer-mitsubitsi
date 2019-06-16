@@ -33,6 +33,7 @@ Route::get('/pengajuan_smk','TransaksiController@pengajuan_index');
 Route::get('/pengajuan_smk/del/{id}','TransaksiController@pengajuan_del');
 Route::get('/konfirmasi_smk_atasan','TransaksiController@confirm_spv');
 Route::get('/konfirmasi_smk_atasan/setuju/{id}','TransaksiController@setuju_spv');
+Route::get('/konfirmasi_smk', 'TransaksiController@confirm_bm');
 
 Route::group(['middleware' => 'auth'], function()
 {
@@ -61,9 +62,6 @@ Route::get('/spk', function () {
 
 Route::get('/buat_spk', function () {
     return view('buat_spk');
-});
-Route::get('/konfirmasi_smk', function () {
-    return view('transaksi_finance.smk.konfirmasi_smk');
 });
 Route::get('/penerimaan_versekot', function () {
     return view('transaksi_finance.kasir.penerimaan_versekot');

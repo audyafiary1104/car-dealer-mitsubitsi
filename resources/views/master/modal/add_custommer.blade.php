@@ -66,11 +66,7 @@
   </div>
         </div>
       <div class="modal-footer">
-<<<<<<< HEAD
-        <button type="submit" class="btn btn-secondary">ADD</button>
-=======
         <button type="submit" class="btn btn-primary" style="box-shadow:2px 2px 4px black">ADD</button>
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
       </div>
       </form>
     </div>

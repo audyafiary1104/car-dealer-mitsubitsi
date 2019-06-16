@@ -23,21 +23,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($conf_spv as $bm)
                     <tr>
                         <td>SMK0001</td>
-                        <td>Audy Afiary</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>Samuel</td>
-                        <td>Credit</td>
-                        <td>RP.1.000.000.00</td>
+                        <td>{{$bm->nama_peminat}}</td>
+						<td>{{$bm->alamat}}</td>
+                        <td>{{$bm->nama_sales}}</td>
+                        <td>{{$bm->payment}}</td>
+                        <td>{{$bm->nilai_versekot}}</td>
                         <td>
                         <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-check-square-o fa-lg" style="text-shadow:1px 1px 3px black;color:springgreen;margin-left:10px" data-toggle="tooltip" title="Setuju"></i></a>
                         <a href="#" data-toggle="modal" data-target="#deleteEmployeeModal"><i class="fa fa-times-circle-o fa-lg" style="text-shadow:1px 1px 3px black;color:#FF0000" data-toggle="tooltip" title="Tidak Setuju"></i></a>
-                        <a href="#" data-toggle="modal" data-target="#lempar_smk_bm"><i class="fa fa-mail-reply-all fa-lg" style="text-shadow:1px 1px 3px black;color:blue" data-toggle="tooltip" title="Lempar"></i></a>
-
                         </td>
                     </tr>
-
+@endforeach
                 </tbody>
             </table>
 			<div class="clearfix">

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ConfimSmkSpv extends Migration
+class ConfirmSmkBm extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class ConfimSmkSpv extends Migration
      */
     public function up()
     {
-        Schema::create('confirm_smk_spv', function (Blueprint $table) {
+        Schema::create('confirm_smk_bm', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_smk');
-            $table->integer('id_cust');
-            $table->integer('id_sales');
-            $table->string('nama_sales');
+            $table->string('id_smk_spv');
             $table->string('nama_peminat');
+            $table->integer('id_nama_peminat');
             $table->string('alamat');
+            $table->integer('id_sales');
             $table->integer('id_spv')->nullable();
             $table->string('payment');
             $table->string('nilai_versekot');
-            $table->integer('lempar_ke_spv')->nullable();
             $table->boolean('confirm')->nullable();
             $table->timestamps();
         });

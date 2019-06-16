@@ -9,51 +9,32 @@
 					</div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-						
-=======
             <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
 
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                         <th>No Transaksi</th>
                         <th>Nama Peminat</th>
 						<th>Address</th>
                         <th>Nilai Versekot</th>
-<<<<<<< HEAD
-                        <th>Actions</th>
-=======
+                        <th>Status Pembayaran</th>
                         <th><center>Actions</center></th>
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-<<<<<<< HEAD
-					
-=======
-
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                         <td>TRK0001</td>
                         <td>Audy Afiary</td>
 						<td>89 Chiaroscuro Rd, Portland, USA</td>
                         <td>Rp.1.000.000</td>
+                        <td>Dibayar Dengan Titipan</td>
                         <td>
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-success">Cetak kwintansi</button>
-                        </td>
-                    </tr>
-                   
-=======
+                        <a href="#bayar" style="margin-left:40%;" data-toggle="modal" data-target="#bayar">Bayar</a>
+                        <a href="#" style="margin-left:40%;" data-toggle="modal" data-target="#">Titipan</a>                       
                         <a href="#" style="margin-left:40%;" data-toggle="modal" data-target="#"><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print Kwitansi"></i></a>
                         </td>
                     </tr>
 
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                 </tbody>
             </table>
 			<div class="clearfix">
@@ -70,9 +51,5 @@
             </div>
         </div>
     </div>
-    @include('transaksi_finance.smk.modal.tambah_psmk')
-<<<<<<< HEAD
+    @include('transaksi_finance.kasir.modal.bayar')
 @endsection
-=======
-@endsection
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c

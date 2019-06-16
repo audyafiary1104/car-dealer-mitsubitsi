@@ -1,35 +1,19 @@
 @extends('layouts.admin.master')
-<<<<<<< HEAD
-@section('content') 
-=======
 @section('content')
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
 <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-<<<<<<< HEAD
-                    <div class="col-sm-6"><h2>Master <b>Custommer</b></h2></div>
-                    <div class="col-sm-3">
-                        <div class="search-box">
-=======
                     <div class="col-sm-4" style="margin-bottom:10px;"><h2>Master <b>Custommer</b></h2></div>
                     <div class="col-sm-8">
                         <button type="button" class="btn btn-info add-new" style="margin-bottom:-100px;margin-left:560px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add Customer</button>
                     </div>
                     <div class="col-sm-12">
                         <div class="search-box" style="margin-right:375px;width:65%;">
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-sm-3">
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Add Customer</button>
-                    </div>
-=======
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                 </div>
             </div>
             <table class="table table-striped table-hover table-bordered">

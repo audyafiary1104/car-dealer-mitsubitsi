@@ -1,25 +1,9 @@
 @extends('layouts.admin.master')
-<<<<<<< HEAD
-@section('content') 
-=======
 @section('content')
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
 <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-<<<<<<< HEAD
-                    <div class="col-sm-8"><h2>Master <b>Biaya</b></h2></div>
-                    <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#biaya"><i class="fa fa-plus"></i> Import Excell</button>
-                    </div>
-                    <div></div>
-                    <div>
-                        <button type="button" class="btn btn-info add-new"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-plus"></i> Export Excell</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="search-box">
-=======
                     <div class="col-sm-4"style="margin-bottom:10px;"><h2>Master <b>Biaya</b></h2></div>
                     <div class="col-sm-8">
                         <button type="button" class="btn btn-info add-new" style="margin-bottom:-95px;margin-left:425px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#biaya"><i class="fa fa-folder-open"></i> Import Excell</button>
@@ -27,7 +11,6 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="search-box" style="margin-right:375px;width:65%;">
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
@@ -56,13 +39,8 @@
                         <td>{{$b->group_gl}}</td>
                         <td>{{$b->linnk_gl}}</td>
                         <td>
-<<<<<<< HEAD
-                            <button href="#custommer_edit" class="edit" title="Edit" data-toggle="modal"><i class="material-icons">&#xE254;</i></button>
-							<a href="/master_biaya/del/{{$b->id}}" class="delete" title="Delete" ><i class="material-icons">&#xE5C9;</i></a>
-=======
                             <a href="#custommer_edit" class="edit" style="margin-left:28%;" title="Edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="text-shadow:1px 1px 3px black" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="/master_biaya/del/{{$b->id}}" class="delete" title="Delete" ><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
                         </td>
                     </tr>
                    @endforeach
@@ -81,15 +59,7 @@
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>     
-
-    @include('master.modal.biaya')
-
-@endsection
-=======
     </div>
 
     @include('master.modal.biaya')
     @endsection
->>>>>>> 45ec3a5339f49044a2cfc7d6288b405272c56f2c
