@@ -88,18 +88,8 @@
 
                                 </a>
                             </li>
-                            <li>
-                                <a class="sidenav-item-link" href="{{url('konfirmasi_smk')}}">
-                                    <span class="nav-text">Konfirmasi Smk(Oleh Bm)</span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sidenav-item-link" href="{{url('buat_spk')}}">
-                                    <span class="nav-text">Buat Spk</span>
-
-                                </a>
-                            </li>
+                           
+                            
                             <li class="has-sub">
                                 <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                     data-target="#faktur" aria-expanded="false" aria-controls="management">
@@ -116,8 +106,26 @@
                                         <li>
                                             <a href="{{url('titipan')}}">Titipan</a>
                                         </li>
+                                        <li>
+                                            <a href="{{url('setor_giro')}}">Setor Giro</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url('giro_cair')}}">Giro Cair</a>
+                                        </li>
                                     </div>
                                 </ul>
+                                <li>
+                                <a class="sidenav-item-link" href="{{url('konfirmasi_smk')}}">
+                                    <span class="nav-text">Konfirmasi Smk(Oleh Bm)</span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('buat_spk')}}">
+                                    <span class="nav-text">Buat Spk</span>
+
+                                </a>
+                            </li>
                                 <li class="has-sub">
                                 <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                     data-target="#operasional" aria-expanded="false" aria-controls="management">

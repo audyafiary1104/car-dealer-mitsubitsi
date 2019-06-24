@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MasterProduct extends Migration
+class Titipan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class MasterProduct extends Migration
      */
     public function up()
     {
-        Schema::create('master_product', function (Blueprint $table) {
+        Schema::create('titipan', function (Blueprint $table) {
             $table->increments("id");
-            $table->string("nama");
-            $table->string("suplier");
-            $table->string("type");
-            $table->integer("stock");
-            $table->boolean("non_aktif")->default(false);
-        });
-    }
+            $table->integer("id_cust");
+            $table->string("nama_cust");
+            $table->string("alamat");
+            $table->integer("nilai_titip");
+            $table->date("tanggal_pembuat");
+        });    }
 
     /**
      * Reverse the migrations.

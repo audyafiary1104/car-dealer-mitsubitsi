@@ -1,4 +1,5 @@
-<div class="modal fade" id="bayar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade bayar" id="bayar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,8 +9,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{url('add_cabang')}}" method="post">
+                <form class="bayar" method="post">
                     @csrf
+                    <input type="hidden" name="id" class="id">
+                    <input type="hidden" name="id_cust" class="id_cust">
+
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Jenis Pembayaran</label>
                         <select class="form-control" id="jenis_pembayaran" name="jenis_pembayaran">
@@ -20,8 +24,9 @@
                         </select>
                     </div>
                     <div class="form-group" id="tunai">
-                        <label for="exampleFormControlInput1">Nilai Persekot</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <label for="exampleFormControlInput1">Nilai Versekot</label>
+                        <input type="text" disabled name="nilai_versekot" class="form-control nilai_versekot"
+                            name="nilai_versekot" required>
                         <label for="exampleFormControlInput1">Dibayar</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
                     </div>
@@ -34,14 +39,18 @@
                         </select>
                         <label for="exampleFormControlInput1">Nomer Giro</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <label for="exampleFormControlInput1">Tanggal Jatuh Tempo</label>
+                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="date" />
                     </div>
                     <div class="form-group" id="titipan">
-                        <label for="exampleFormControlInput1">Nomer Titipan</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <label for="exampleFormControlInput1">Nilai Versekot</label>
+                        <input class="form-control nilai_versekot" id="nilai_versekot" name="nilai_versekot"
+                            type="text" />
                         <label for="exampleFormControlInput1">Nama Cust</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
                         <label for="exampleFormControlInput1">Nilai Titipan</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        
                     </div>
             </div>
 
@@ -65,13 +74,14 @@
             } else if ($('#jenis_pembayaran').val() == 'giro') {
                 $('#giro').show();
                 $('#titipan').hide();
-                $('#tunai').hide();                 
-            }else if($('#jenis_pembayaran').val() == 'titipan') {
-                $('#tunai').hide();                 
-                $('#giro').hide();                 
+                $('#tunai').hide();
+            } else if ($('#jenis_pembayaran').val() == 'titipan') {
+                $('#tunai').hide();
+                $('#giro').hide();
                 $('#titipan').show();
             }
 
         });
     });
+
 </script>

@@ -26,13 +26,13 @@
                 @foreach($conf_spv as $bm)
                     <tr>
                         <td>SMK0001</td>
-                        <td>{{$bm->nama_peminat}}</td>
+                        <td>{{$bm->nama_cust}}</td>
 						<td>{{$bm->alamat}}</td>
                         <td>{{$bm->nama_sales}}</td>
                         <td>{{$bm->payment}}</td>
                         <td>{{$bm->nilai_versekot}}</td>
                         <td>
-                        <a href="#" data-toggle="modal" data-target="#"><i class="fa fa-check-square-o fa-lg" style="text-shadow:1px 1px 3px black;color:springgreen;margin-left:10px" data-toggle="tooltip" title="Setuju"></i></a>
+                        <a href="/konfirmasi_smk/{{$bm->id}}"  data-target="#"><i class="fa fa-check-square-o fa-lg" style="text-shadow:1px 1px 3px black;color:springgreen;margin-left:10px" data-toggle="tooltip" title="Setuju"></i></a>
                         <a href="#" data-toggle="modal" data-target="#deleteEmployeeModal"><i class="fa fa-times-circle-o fa-lg" style="text-shadow:1px 1px 3px black;color:#FF0000" data-toggle="tooltip" title="Tidak Setuju"></i></a>
                         </td>
                     </tr>

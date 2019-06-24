@@ -43,7 +43,7 @@ class SmkController extends Controller {
         DB::table('jabatans')->insert([
             'nama_jabatan' => $request->jabatan,
             'role' => $request->role,
-            'nama' => $request->nama,
+            'nama' => $request->show_user,
             'nik' => $request->nik
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
@@ -92,16 +92,18 @@ class SmkController extends Controller {
     }
     public function product(Request $request) {
         DB::table('master_product')->insert([
-         'nomer_rangka'=> $request->nomer_rangka,
+         'nama'=> $request->nama,
          'suplier'=> $request->suplier,
-         'warna'=> $request->warna,
          'type'=> $request->type,
          'stock'=> $request->stock
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
-
+public function product_index()
+{
+    return view('master.product');
+}
     public function biaya(Request $request) {
         // dd($request->file);
      if ($file = $request->file) {
@@ -156,4 +158,18 @@ class SmkController extends Controller {
         $lv_jbt = DB::table('jabatans')->get();
         return view('master.level_jabatan',compact('lv_jbt'));
     }
+    public function jabatan_auto(Request $request)
+    {
+            $query = $request->get('term','');
+            $karyawan = DB::table('master_karyawan')->where('name', 'LIKE','%'.$query.'%')->get();
+            $data=array();
+            foreach ($karyawan as $karyawan) {
+                $data[]=array('value'=>$karyawan->name,'id'=>$karyawan->id);
+        }
+        if(count($data))
+             return $data;
+        else
+            return ['value'=>'No Result Found','id'=>''];
+    }
+    
 }

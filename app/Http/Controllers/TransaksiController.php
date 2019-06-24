@@ -14,6 +14,8 @@ class TransaksiController extends Controller
         $data_sales = $request->id_sales;
         $cust = $request->nama;
         $pecah = explode('|', $data_sales);
+        $id = explode('|',$request->merk);
+
         $pecah_cust = explode('|', $cust);
         $some_date = Carbon::now()->toDateTimeString();
         $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');   
@@ -24,8 +26,8 @@ class TransaksiController extends Controller
             'tanggal_pemesan' => $request->tanggal_pemesan,
             'nama_stnk' => $request->nama_stnk,
             'alamat' => $request->alamat,
-            'merk' => $request->merk,
-            'type' => $request->type,
+            'merk' => $id[0],
+            'type' => $id[1],
             'tahun' => $request->tahun,
             'warna' => $request->warna,
             'id_sales' => $pecah[0],
@@ -37,22 +39,25 @@ class TransaksiController extends Controller
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
-    public function pengajuan_index()
+    public function pengajuan_index(Request $request)
     {
        $smk = DB::table('pengajuan_smk')->get();
-       $sales = DB::table('jabatans')->get();
+
+       $product = DB::table('master_product')->get();
        $cust = DB::table('master_custommer')->get(); 
        if(count($cust)<= 0){
         $cust = null;
         }else{
          $cust = DB::table('master_custommer')->get();
         }
-        if(count($sales)<= 0){
-            $sales = null;
-        }else{
+        if(count($product)<= 0){
+            $product = null;
+            }else{
+             $product = DB::table('master_product')->get();
+            }
+       
         $sales = DB::table('jabatans')->where('nama_jabatan','sales')->get();
-        }
-       return view('transaksi_finance.smk.pengajuan_smk',compact('smk','sales','cust'));
+       return view('transaksi_finance.smk.pengajuan_smk',compact('smk','sales','cust','product'));
     }
     public function pengajuan_del($id)
     {
@@ -63,33 +68,37 @@ class TransaksiController extends Controller
     }
     public function confirm_spv()
     {
-       $smk = DB::table('pengajuan_smk')->get();
-       $confirm = DB::table('confirm_smk_spv')->get();
-       foreach($confirm as $c ){
-
-       }
-       return view('transaksi_finance.smk.konfirmasi_smk_atasan',compact('smk','c'));
+       $smk = DB::table('pengajuan_smk')->where('status',null)->get();
+       return view('transaksi_finance.smk.konfirmasi_smk_atasan',compact('smk'));
     }
-    public function setuju_spv($id)
+    public function setuju_spv(Request $request,$id)
     {
         $db = DB::table('pengajuan_smk')->find($id);
-        DB::table('confirm_smk_spv')->insert([
-            'id_smk' => $id,
-            'nama_peminat' => $db->nama_cust,
-            'alamat' => $db->alamat,
-            'id_sales' => $db->id_sales,
-            'id_cust' => $db->id_cust,
-            'payment' => $db->payment,
-            'nama_sales' => $db->nama_sales,
-            'nilai_versekot' => $db->nilai_versekot,
-            'confirm' => true
+        DB::table('pengajuan_smk')->update([
+            'status' => 'setuju'
         ]);
-        Alert::success('Success', 'Data berhasil Disetujui');
+        Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
         return redirect()->back();        
     }
     public function confirm_bm()
     {
-        $conf_spv = DB::table('confirm_smk_spv')->get();
+        $conf_spv = DB::table('pengajuan_smk')->where('status_pembayaran','!=','Belum Terbayar')
+        ->orWhereNull('status_bm')->get();
         return view('transaksi_finance.smk.konfirmasi_smk',compact('conf_spv'));
     }
-}
+    public function pengajuan_index_ajax($id)
+    {
+        $product = DB::table('master_product')->find($id);
+        return response()->json($product);
+    }
+    public function confirm_bm_stj($id)
+    {   $get = DB::table('pengajuan_smk')->where('id',$id)->get();
+        DB::table('pengajuan_smk')->where('id',$id)->update([
+           'status_bm' => 'setuju'
+       ]);
+
+       Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
+       return redirect()->back();        
+   }
+    }
+

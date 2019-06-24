@@ -18,6 +18,8 @@
                         <th class="text-white">Nama</th>
                         <th class="text-white">Jabatan</th>
                         <th class="text-white">Role</th>
+                        <th class="text-white">password</th>
+
                         <th class="text-center text-white">Actions</th>
                     </tr>
                 </thead>

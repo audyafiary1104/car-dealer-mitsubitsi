@@ -12,7 +12,9 @@
       @csrf
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
-    <input name="nama" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama ">
+    <input name="show_user" type="text" class="form-control nama_karyawan" id="nama_karyawan" placeholder="Nama ">
+    <input type="hidden" name="user_id" value="" />
+
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nik</label>
@@ -48,7 +50,31 @@
         <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
       </form>
-
     </div>
   </div>
 </div>
+<link href="http://demo.expertphp.in/css/jquery.ui.autocomplete.css" rel="stylesheet">
+        <script src="http://demo.expertphp.in/js/jquery.js"></script>
+    <script src="http://demo.expertphp.in/js/jquery-ui.min.js"></script>
+<script>
+   $(document).ready(function() {
+    src = "{{ route('searchajax') }}";
+     $("#search_text").autocomplete({
+        source: function(request, response) {
+            $.ajax({
+                url: src,
+                dataType: "json",
+                data: {
+                    term : request.term
+                },
+                success: function(data) {
+                    response(data);
+                   
+                }
+            });
+        },
+        minLength: 3,
+       
+    });
+});
+</script>
