@@ -23,13 +23,15 @@
                             <option value="titipan">Titipan</option>
                         </select>
                     </div>
+
                     <div class="form-group" id="tunai">
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
-                        <input type="text" disabled name="nilai_versekot" class="form-control nilai_versekot"
+                        <input type="text"  name="nilai_versekot" class="form-control nilai_versekot"
                             name="nilai_versekot" required>
                         <label for="exampleFormControlInput1">Dibayar</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="text" />
                     </div>
+
                     <div class="form-group" id="giro">
                         <label for="exampleFormControlInput1">Nama Bank</label>
                         <select class="form-control">
@@ -45,12 +47,12 @@
                     <div class="form-group" id="titipan">
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
                         <input class="form-control nilai_versekot" id="nilai_versekot" name="nilai_versekot"
-                            type="text" />
+                            type="text" disabled/>
                         <label for="exampleFormControlInput1">Nama Cust</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
                         <label for="exampleFormControlInput1">Nilai Titipan</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
-                        
+
                     </div>
             </div>
 
@@ -80,7 +82,6 @@
                 $('#giro').hide();
                 $('#titipan').show();
             }
-
         });
     });
 

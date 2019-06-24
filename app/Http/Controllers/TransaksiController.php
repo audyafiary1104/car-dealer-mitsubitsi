@@ -15,10 +15,9 @@ class TransaksiController extends Controller
         $cust = $request->nama;
         $pecah = explode('|', $data_sales);
         $id = explode('|',$request->merk);
-
         $pecah_cust = explode('|', $cust);
         $some_date = Carbon::now()->toDateTimeString();
-        $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');   
+        $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
         DB::table('pengajuan_smk')->insert([
             'nama_cust' => $pecah_cust[1],
@@ -44,7 +43,7 @@ class TransaksiController extends Controller
        $smk = DB::table('pengajuan_smk')->get();
 
        $product = DB::table('master_product')->get();
-       $cust = DB::table('master_custommer')->get(); 
+       $cust = DB::table('master_custommer')->get();
        if(count($cust)<= 0){
         $cust = null;
         }else{
@@ -55,7 +54,7 @@ class TransaksiController extends Controller
             }else{
              $product = DB::table('master_product')->get();
             }
-       
+
         $sales = DB::table('jabatans')->where('nama_jabatan','sales')->get();
        return view('transaksi_finance.smk.pengajuan_smk',compact('smk','sales','cust','product'));
     }
@@ -64,7 +63,7 @@ class TransaksiController extends Controller
         $db = DB::table('pengajuan_smk')->where('id',$id);
         $db->delete();
         Alert::success('Success', 'Data berhasil Dihapus');
-        return redirect()->back();        
+        return redirect()->back();
     }
     public function confirm_spv()
     {
@@ -78,7 +77,7 @@ class TransaksiController extends Controller
             'status' => 'setuju'
         ]);
         Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
-        return redirect()->back();        
+        return redirect()->back();
     }
     public function confirm_bm()
     {
@@ -92,13 +91,25 @@ class TransaksiController extends Controller
         return response()->json($product);
     }
     public function confirm_bm_stj($id)
-    {   $get = DB::table('pengajuan_smk')->where('id',$id)->get();
-        DB::table('pengajuan_smk')->where('id',$id)->update([
+    {   $get = DB::table('pengajuan_smk')->where('id',$id)->first();
+        $cust = DB::table('master_custommer')->where('id',$get->id_cust)->first();
+        $some_date = Carbon::now()->toDateTimeString();
+        $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
+        $time = date('Y-m-d',strtotime($now));
+        $smk = DB::table('pengajuan_smk')->where('id',$id)->update([
            'status_bm' => 'setuju'
-       ]);
-
+        ]);
+            DB::table('spk')->insert([
+            'nama_cust' => $get->nama_cust,
+            'alamat'=> $get->alamat,
+            'type_kendaraan'=> $get->type,
+            'pembayaran'=> $get->status_pembayaran,
+            'ktp'=> $cust->nik,
+            'tanggal_pembuat'=> $time,
+            'id_smk'=> $id,
+            ]);
        Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
-       return redirect()->back();        
+       return redirect()->back();
    }
     }
 

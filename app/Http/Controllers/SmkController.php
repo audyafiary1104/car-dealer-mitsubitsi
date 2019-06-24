@@ -78,7 +78,7 @@ class SmkController extends Controller {
     public function custommer_index()
     {
         $cust = DB::table('master_custommer')->get();
-       return view('master.custommer',compact('cust'));        
+       return view('master.custommer',compact('cust'));
     }
     public function departement_index()
     {
@@ -102,7 +102,8 @@ class SmkController extends Controller {
     }
 public function product_index()
 {
-    return view('master.product');
+    $product = DB::table('master_product')->get();
+    return view('master.product',compact('product'));
 }
     public function biaya(Request $request) {
         // dd($request->file);
@@ -125,7 +126,7 @@ public function product_index()
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
-    
+
     public function add_cabang(Request $request)
     {
         DB::table('master_cabang')->insert([
@@ -134,10 +135,10 @@ public function product_index()
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->back();
     }
-    
+
     public function master_biaya()
     {
-        
+
         $biaya = DB::table('master_biaya')->get();
         return view('master.biaya',compact('biaya'));
     }
@@ -171,5 +172,5 @@ public function product_index()
         else
             return ['value'=>'No Result Found','id'=>''];
     }
-    
+
 }

@@ -16,7 +16,7 @@ class PengajuanSmk extends Migration
         Schema::create('pengajuan_smk', function (Blueprint $table) {
             $table->increments("id");
             $table->string("nama_cust");
-            $table->integer("id_sales");            
+            $table->integer("id_sales");
             $table->integer("id_cust");
             $table->string("nama_sales");
             $table->string("nama_stnk");

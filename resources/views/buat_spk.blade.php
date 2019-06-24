@@ -7,9 +7,7 @@
                     <div class="col-sm-8">
 						<h2>Buat <b>Spk</b></h2>
 					</div>
-					<div class="col-sm-12">
-                        <button type="button" style="margin-left:940px;box-shadow:1px 1px 3px black;" class="btn btn-info add-new"  data-toggle="modal" data-target="#tambah_smk"><i class="fa fa-plus"></i> Add Jabatan</button>
-                    </div>
+
                 </div>
             </div>
             <table class="table table-striped table-bordered table-hover">
@@ -27,21 +25,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($spk as $spk)
                     <tr>
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
-                        <td>Audy Afiary</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>3021.011.011.00</td>
-                        <td>Mobil</td>
-                        <td>Tunai</td>
+                        <td>{{$spk->nama_cust}}</td>
+						<td>{{$spk->alamat}}</td>
+                        <td>{{$spk->ktp}}</td>
+                        <td>{{$spk->type_kendaraan}}</td>
+                        <td>{{$spk->pembayaran}}</td>
 
                         <td>
-                            <a href="#" style="margin-left:28%;" data-toggle="modal" data-target="#edit_jabatan"><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
+                            <a href="/print_spk" style="margin-left:28%;" ><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
                             <a href="#" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
                         </td>
                     </tr>
-
+@endforeach
                 </tbody>
             </table>
 			<div class="clearfix">

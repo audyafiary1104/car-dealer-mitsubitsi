@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Type</label>
-                        <input type="text" class="form-control" name="type" id="type"  maxlength="3">
+                        <input type="text" disabled class="form-control" name="type" id="type"  maxlength="3">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tahun</label>
@@ -120,9 +120,9 @@
                          data: pecah[0],
                         success:function(data){
     				        $("#type").val(data.type);
-			        }, 
+			        },
 
-                });     
+                });
             });
         });
     </script>

@@ -9,14 +9,14 @@ use DB;
 class KasirController extends Controller
 {
     public function kasir_index()
-    {   
+    {
         $user = DB::table('pengajuan_smk')->where('status','setuju')->get();
         return view('transaksi_finance.kasir.penerimaan_versekot',compact('user'));
     }
    public function penerimaan_versekot(Request $request)
    {
         $some_date = Carbon::now()->toDateTimeString();
-        $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');   
+        $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
         DB::table('penerimaan_versekot')->insert([
         'id_cust' => $request->id_cust,
