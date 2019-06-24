@@ -7,7 +7,7 @@
                     <div class="col-sm-8">
 						<h2> Setor Giro<b></b></h2>
 					</div>
-					
+
                 </div>
             </div>
             <table class="table table-striped table-bordered table-hover">
@@ -27,8 +27,8 @@
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
 						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>Rp.1.000.000</td>
-                        <td>BElum Distor</td>
+                        <td>11/05/2001</td>
+                        <td>Belum Disetor</td>
                         <td>
                         <button type="button" class="btn btn-success edit-item"
                             data-toggle="modal">Setor Giro</button>
