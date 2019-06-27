@@ -5,7 +5,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-8">
-						<h2> Setor Giro<b></b></h2>
+						<h2> Giro Cair<b></b></h2>
 					</div>
 					
                 </div>
@@ -23,18 +23,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($cair as $cair)
                     <tr>
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>Rp.1.000.000</td>
-                        <td>Sudah Distor</td>
+						<td>{{$cair->nama_bank}}</td>
+                        <td>{{$cair->tanggal_jatuh_tempo}}</td>
+                        <td>{{$cair->status_giro}}</td>
                         <td>
-                        <button type="button" class="btn btn-success edit-item"
-                            data-toggle="modal">Cair</button>
+                        <a href="/giro_cair/{{$cair->id}}" >Cair</a>
                                                     </td>
                     </tr>
-
+@endforeach
                 </tbody>
             </table>
 			<div class="clearfix">

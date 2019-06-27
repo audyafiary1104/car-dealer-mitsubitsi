@@ -32,6 +32,7 @@ class PengajuanSmk extends Migration
             $table->string("status")->nullable();
             $table->integer("lempar_spv")->nullable();
             $table->string("status_bm")->nullable();
+            $table->string("status_giro")->nullable();
             $table->string("status_pembayaran")->default("Belum Terbayar");
         });
     }

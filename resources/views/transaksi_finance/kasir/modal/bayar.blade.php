@@ -34,15 +34,15 @@
 
                     <div class="form-group" id="giro">
                         <label for="exampleFormControlInput1">Nama Bank</label>
-                        <select class="form-control">
-                            <option value="item1">bca</option>
-                            <option value="item2">bri</option>
-                            <option value="item3">syariah</option>
+                        <select name="nama_bank" class="form-control">
+                            <option value="bca">bca</option>
+                            <option value="bri">bri</option>
+                            <option value="syariah">syariah</option>
                         </select>
                         <label for="exampleFormControlInput1">Nomer Giro</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="nomer_giro" type="text" />
                         <label for="exampleFormControlInput1">Tanggal Jatuh Tempo</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="date" />
+                        <input class="form-control" id="exampleFormControlInput1" name="tanggal_jatuh_tempo" type="date" />
                     </div>
                     <div class="form-group" id="titipan">
                         <label for="exampleFormControlInput1">Nilai Versekot</label>

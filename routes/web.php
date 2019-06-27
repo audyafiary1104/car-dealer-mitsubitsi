@@ -46,6 +46,8 @@ Route::get('/titipan', 'KasirController@titipan_index');
 Route::post('add_titipan', 'KasirController@titipan_store');
 Route::get('/buat_spk','SpkController@spk_index');
 Route::get('/print_spk','SpkController@print_spk');
+Route::get('/setor_giro', 'KasirController@setor_giro');
+Route::get('/setor_giro/{id}', 'KasirController@giro_stor');
 
 Route::group(['middleware' => 'auth'], function()
 {
@@ -69,13 +71,9 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/setor_giro', function () {
-    return view('transaksi_finance.kasir.setor_giro');
-});
 
-Route::get('/giro_cair', function () {
-    return view('transaksi_finance.kasir.giro_cair');
-});
+Route::get('/giro_cair', 'KasirController@giro_cair');
+Route::get('/giro_cair/{id}', 'KasirController@cair_giro');
 
 Route::get('/pelunasan', function () {
     return view('transaksi_finance.kasir.pelunasan');

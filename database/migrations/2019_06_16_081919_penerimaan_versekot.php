@@ -18,7 +18,12 @@ class PenerimaanVersekot extends Migration
             $table->integer("id_cust");
             $table->integer("id_smk");
             $table->integer("nilai_versekot");
+            $table->string("nama_bank")->nullable();
+            $table->string("type_pembayaran");
+            $table->string("status_giro")->default('belum Disetor');
             $table->date("tanggal_pembuat");
+            $table->date("tanggal_jatuh_tempo")->nullable();
+            
         });
     }
 

@@ -23,18 +23,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($giro as $giro)
                     <tr>
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>11/05/2001</td>
-                        <td>Belum Disetor</td>
+						<td>{{$giro -> nama_bank}}</td>
+                        <td>{{$giro->tanggal_jatuh_tempo}}</td>
+                        <td>{{$giro->status_giro}}</td>
                         <td>
-                        <button type="button" class="btn btn-success edit-item"
-                            data-toggle="modal">Setor Giro</button>
+                        <a href="/setor_giro/{{$giro->id}}" class="btn btn-success edit-item">Setor Giro</a>
                                                     </td>
                     </tr>
-
+@endforeach
                 </tbody>
             </table>
 			<div class="clearfix">
