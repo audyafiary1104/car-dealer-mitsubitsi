@@ -45,7 +45,7 @@
                         <label for="exampleFormControlInput1">Merk</label>
                         @if($product == null)
                         <select class="form-control" name="id_sales" id="merk">
-                            <option disabled >Input Master Product Terlebih Dahulu</option>
+                            <option disabled>Input Master Product Terlebih Dahulu</option>
                         </select>
                         @else
                         @foreach($product as $s)
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Type</label>
-                        <input type="text" disabled class="form-control" name="type" id="type"  maxlength="3">
+                        <input type="text" disabled class="form-control" name="type" id="type" maxlength="3">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tahun</label>
@@ -95,6 +95,18 @@
                             <option value="kredit">Kredit</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="chkPassport">
+                            <input type="checkbox" id="chkPassport" />
+                            Apakah Menggunakan Of the road
+                        </label>
+                        <hr />
+                        <div id="dvPassport" style="display: none">
+                            Harga Of the road:
+                            <input type="number" name="of-theroad" id="txtPassportNumber" />
+                        </div>
+
+                    </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-secondary">ADD</button>
                     </div>
@@ -108,19 +120,20 @@
             $('#merk').click(function (e) {
                 var selectedCCountry =
                     $(this).children("option:selected").val();
-                    var pecah = selectedCCountry.split("|");
+                var pecah = selectedCCountry.split("|");
                 e.preventDefault();
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 });
-                $.ajax({ url:"/pengajuan_smk/ajax/"+pecah[0],
-                         type:"POST",
-                         data: pecah[0],
-                        success:function(data){
-    				        $("#type").val(data.type);
-			        },
+                $.ajax({
+                    url: "/pengajuan_smk/ajax/" + pecah[0],
+                    type: "POST",
+                    data: pecah[0],
+                    success: function (data) {
+                        $("#type").val(data.type);
+                    },
 
                 });
             });

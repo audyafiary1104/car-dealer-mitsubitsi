@@ -93,6 +93,7 @@ class SmkController extends Controller {
     public function product(Request $request) {
         DB::table('master_product')->insert([
          'nama'=> $request->nama,
+         'tahun_perakitan'=> $request->tahun_perakitan,
          'suplier'=> $request->suplier,
          'type'=> $request->type,
          'stock'=> $request->stock

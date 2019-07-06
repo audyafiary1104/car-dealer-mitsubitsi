@@ -28,6 +28,8 @@
                     <th class="text-white">Nama</th>
                     <th class="text-white">Suplier</th>
                     <th class="text-white">Type</th>
+                    <th class="text-white">tahun Perkitan</th>
+
                     <th class="text-white">Minimum Stock</th>
                     <th class="text-white">Non aktif</th>
                     <th class="text-white text-center">Actions</th>
@@ -40,6 +42,7 @@
                     <td>{{$product -> nama}}</td>
                     <td>{{$product -> suplier}}</td>
                     <td>{{$product -> type}}</td>
+                    <td>{{$product -> tahun_perakitan}}</td>
                     <td>{{$product->stock}}</td>
 					@if($product-> non_aktif == 0)
                     <td>Aktif</td>
@@ -93,6 +96,10 @@
                     <div class="form-group">
                         <label>Type</label>
                         <input type="text" class="form-control" name="type" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tahun perakitan</label>
+                        <input type="date" class="form-control" name="tahun_perakitan" required>
                     </div>
                     <div class="form-group">
                         <label>Stock</label>

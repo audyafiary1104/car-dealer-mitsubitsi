@@ -36,8 +36,8 @@
                         <td>{{$spk->pembayaran}}</td>
 
                         <td>
-                            <a href="/print_spk" style="margin-left:28%;" ><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
-                            <a href="#" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
+                            <a href="/print_spk/{{$spk->id}}" target="_blank"style="margin-left:28%;" ><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
+                            <a href="/print_spk/{{$spk->id}}" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
                         </td>
                     </tr>
 @endforeach

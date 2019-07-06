@@ -47,25 +47,25 @@
                     <div class="form-group row">
                         <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nama" placeholder="Nama">
+                        <input type="text" class="form-control" value="{{$spk->nama_cust}}"id="nama" placeholder="Nama">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="KTP" class="col-sm-2 col-form-label">KTP</label>
                         <div class="col-sm-10">
-                        <input type="number" class="form-control" id="KTP" placeholder="KTP">
+                        <input type="number" class="form-control" id="KTP" value="{{$spk->nik}}" placeholder="KTP">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="Alamat" placeholder="Alamat">
+                        <input type="text" class="form-control" value="{{$spk->alamat}}"id="Alamat" placeholder="Alamat">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="No Hp" class="col-sm-2 col-form-label">No Hp</label>
                         <div class="col-sm-10">
-                        <input type="tel" class="form-control" id="No Hp" placeholder="No Hp">
+                        <input type="tel" class="form-control" value=""id="No Hp" placeholder="No Hp">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -84,26 +84,26 @@
                     <div class="form-group row">
                         <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nama" placeholder="Nama">
+                        <input type="text" class="form-control" value="{{$spk->nama_stnk}}" id="nama" placeholder="Nama">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="Alamat" placeholder="Alamat">
+                        <input type="text" class="form-control" value="{{$spk->alamat}}"  id="Alamat" placeholder="Alamat">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="KTP" class="col-sm-2 col-form-label">KTP</label>
                         <div class="col-sm-10">
-                        <input type="number" class="form-control" id="KTP" placeholder="KTP">
+                        <input type="number" class="form-control" value="{{$spk->nik}}"  id="KTP" placeholder="KTP">
                         </div>
                     </div>
                     <h6>DATA KENDARAAN</h6>
                     <div class="form-group row">
                         <label for="Tipe Kendaraan" class="col-sm-2 col-form-label">Tipe Kendaraan</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="Tipe Kendaraan" placeholder="Tipe Kendaraan">
+                        <input type="text" class="form-control"  value="{{$spk->type}}" id="Tipe Kendaraan" placeholder="Tipe Kendaraan">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -128,7 +128,7 @@
                     <div class="form-group row">
                         <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="Alamat" placeholder="Alamat">
+                        <input type="text" class="form-control" value="{{$spk->alamat}}" id="Alamat" placeholder="Alamat">
                         </div>
                     </div>
                     <h6>HARGA & CARA PEMBAYARAN</h6>
@@ -169,7 +169,7 @@
                     <div class="form-group row">
                         <label for="Juamlah Uang Muka" class="col-sm-2 col-form-label">Juamlah Uang Muka</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="Juamlah Uang Muka" placeholder="Juamlah Uang Muka">
+                        <input type="text" class="form-control"value="{{$spk->nilai_versekot}}" id="Juamlah Uang Muka" placeholder="Juamlah Uang Muka">
                         </div>
                     </div>
                     <div class="form-group row">

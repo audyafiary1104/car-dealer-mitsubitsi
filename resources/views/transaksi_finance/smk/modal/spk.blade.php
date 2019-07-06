@@ -157,7 +157,7 @@
                             <label for="On the Road" class="col-sm-2 col-form-label"> Cara Pembayaran </label>
                             <div class="col-sm-9 ml-2">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"  checked="checked" >
                                         <label class="form-check-label" for="inlineRadio1">Kredit</label>
                                     </div>
                                     <div class="form-check form-check-inline">

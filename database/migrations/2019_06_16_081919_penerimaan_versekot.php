@@ -18,6 +18,8 @@ class PenerimaanVersekot extends Migration
             $table->integer("id_cust");
             $table->integer("id_smk");
             $table->integer("nilai_versekot");
+            $table->integer("dibayar");
+            $table->string("sisa");
             $table->string("nama_bank")->nullable();
             $table->string("type_pembayaran");
             $table->string("status_giro")->default('belum Disetor');

@@ -24,6 +24,9 @@ class MasterCustommer extends Migration
             $table->string("status");
             $table->string("pekerjaan");
             $table->string("industri");
+            $table->string("email");
+            $table->integer("phone_number");
+            $table->integer("npwp");
             $table->string("provinsi");
             $table->string("kode_pos");
         });

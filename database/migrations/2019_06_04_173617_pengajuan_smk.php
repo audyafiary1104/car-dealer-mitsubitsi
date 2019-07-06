@@ -29,6 +29,7 @@ class PengajuanSmk extends Migration
             $table->string("payment");
             $table->date("tanggal_pemesan");
             $table->date("tanggal_input");
+            $table->date("pembayaran_paling_lambat");
             $table->string("status")->nullable();
             $table->integer("lempar_spv")->nullable();
             $table->string("status_bm")->nullable();
