@@ -1,26 +1,21 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-4" style="margin-bottom:-10px;">
+<div class="container-fluid">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                <div class="col-sm-5 mb-2">
                     <h2>Master <b>Product</b></h2>
                 </div>
-                <div class="col-sm-12" style="margin-left:790px">
-                    <a href="#addEmployeeModal" class="btn btn-info"
-                        style="box-shadow:1px 1px 3px black;margin-bottom:-50px;" data-toggle="modal"><i
-                            class="fa fa-plus fa-lg"></i> <span>Add Product</span></a>
-                    <a href="#" class="btn btn-info"
-                        style="box-shadow:1px 1px 3px black;margin-bottom:-50px;margin-left:10px;"><i
-                            class="fa fa-folder fa-lg"></i> <span>Import Excel</span></a>
+                <div class="d-flex justify-content-between">
+                        <div class="search-box w-50">
+                            <i class="material-icons">&#xE8B6;</i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                    <a href="#addEmployeeModal" class="btn btn-info ml-auto shadow" data-toggle="modal"><i class="fa fa-plus fa-lg"></i> <span>Add Product</span></a>
+                    <a href="#" class="btn btn-info ml-1 shadow"><i class="fa fa-folder fa-lg"></i> <span>Import Excel</span></a>
                 </div>
-                <div class="search-box col-sm-8">
-                    <i class="material-icons" style="margin-left:15px;">&#xE8B6;</i>
-                    <input type="text" class="form-control" placeholder="Search&hellip;">
-                </div>
-            </div>
-        </div>
+             </div>
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <tr class="bg-primary">

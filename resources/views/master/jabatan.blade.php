@@ -1,26 +1,22 @@
 @extends('layouts.admin.master')
 @section('content')
-<body>
-    <div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
+    <div class="container-fluid">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
                     <div class="col-sm-4"><h2>Master <b>Jabatan</b></h2></div>
-                    <div class="col-sm-12">
-                        <button type="button" style="margin-left:940px;box-shadow:1px 1px 3px black;" class="btn btn-info add-new"  data-toggle="modal" data-target="#modal_jabatan"><i class="fa fa-plus"></i> Add Jabatan</button>
-                    </div>
+                    <div class="d-flex flex-row-reverse">
+                    <button type="button"  class="btn btn-info add-new position-sticky shadow buttom-responsive"  data-toggle="modal" data-target="#modal_jabatan"><i class="fa fa-plus"></i> Add Jabatan</button>
                 </div>
             </div>
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr class="bg-primary">
-                        <th class="text-white">Kode</th>
-                        <th class="text-white">Nama</th>
-                        <th class="text-white">Jabatan</th>
-                        <th class="text-white">Role</th>
-                        <th class="text-white">password</th>
-
-                        <th class="text-center text-white">Actions</th>
+                        <th class="text-white shadow">Kode</th>
+                        <th class="text-white shadow">Nama</th>
+                        <th class="text-white shadow">Jabatan</th>
+                        <th class="text-white shadow">Role</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,9 +26,9 @@
                         <td>{{$jb->nama}}</td>
                         <td>{{$jb->nama_jabatan}}</td>
                         <td>{{$jb->role}}</td>
-                        <td>
-                            <a href="#" style="margin-left:28%;" class="edit" title="Edit" data-toggle="modal" data-target="#edit_jabatan"><i class="fa fa-pencil fa-lg" style="text-shadow:1px 1px 3px black"data-toggle="tooltip" title="Edit"></i></a>
-                            <a href="#" style="margin-left:5%;" class="delete" title="Delete" data-toggle="tooltip"><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
+                        <td class="text-center">
+                            <button type="button" tooltip="modal" data-togle="#edit_jabatan" class="btn btn-warning btn-sm shadow"><i class="fa fa-pencil text-white"></i></button>
+                            <button type="button" class="btn btn-sm btn-danger shadow"><i class="fa fa-times-circle text-white"></i></button>
                         </td>
                     </tr>
                     @endforeach

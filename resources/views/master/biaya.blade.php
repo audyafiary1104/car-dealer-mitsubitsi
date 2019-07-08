@@ -1,20 +1,17 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4"style="margin-bottom:10px;"><h2>Master <b>Biaya</b></h2></div>
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-95px;margin-left:425px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#biaya"><i class="fa fa-folder-open"></i> Import Excell</button>
-                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-95px;margin-left:5px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-folder"></i> Export Excell</button>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="search-box" style="margin-right:375px;width:65%;">
+<div class="container-fluid">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                <div class="col-sm-5 mb-2"><h2>Master <b>Biaya</b></h2></div>
+                <div class="d-flex justify-content-between">
+                        <div class="search-box w-50">
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
-                    </div>
+                        <button type="button" class="btn btn-info add-new ml-auto shadow"  data-toggle="modal" data-target="#biaya"><i class="fa fa-folder-open"></i> Import Excell</button>
+                        <button type="button" class="btn btn-info add-new ml-1 shadow"  data-toggle="modal" data-target="#add_custommer"><i class="fa fa-folder"></i> Export Excell</button>
                 </div>
             </div>
             <table class="table table-striped table-hover table-bordered">

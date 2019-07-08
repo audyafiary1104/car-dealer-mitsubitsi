@@ -1,17 +1,15 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                <div class="col-sm-8"><h2>Master <b>Karyawan</b></h2></div>
-                    <div class="col-sm-12">
-                        <button type="button" class="btn btn-info add-new" style="margin-left:780px;box-shadow:1px 1px 3px black;" data-toggle="modal" data-target="#tambah_karyawan"><i class="fa fa-plus"></i> Add Karyawan</button>
-                        <button type="button" class="btn btn-info add-new" style="margin-left:10px;box-shadow:1px 1px 3px black" data-toggle="modal" data-target="#uploud_excel"><i class="fa fa-folder"></i> Import Excel</button>
+<div class="container-fluid">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                <div class="col-sm-4"><h2>Master <b>Karyawan</b></h2></div>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info add-new ml-1 shadow" data-toggle="modal" data-target="#tambah_karyawan"><i class="fa fa-plus"></i> Add Karyawan</button>
+                        <button type="button" class="btn btn-info add-new shadow" data-toggle="modal" data-target="#uploud_excel"><i class="fa fa-folder"></i> Import Excel</button>
                     </div>
-
                 </div>
-            </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr class="bg-primary">
@@ -26,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-        @If($htng == 0)
+                @If($htng == 0)
                     <tr>
                     </tr>
 				@else
@@ -59,8 +57,8 @@
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
                     <li class="page-item"><a href="#" class="page-link">Next</a></li>
                 </ul>
+                </div>
             </div>
-        </div>
     </div>
     @include('master.modal.uploud_file_karyawan')
     @include('master.modal.edit_karyawan')

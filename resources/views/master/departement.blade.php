@@ -1,20 +1,18 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4" style="margin-bottom:-10px;"><h2>Master <b>Departement</b></h2></div>
-                    <div class="col-sm-12">
-                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-50px;margin-left:906px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#add_departemen"><i class="fa fa-plus"></i> Add Departement</button>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="search-box" style="margin-right:375px;width:65%;margin-bottom:10px;margin-bottom:2%;">
-                         <i class="material-icons">&#xE8B6;</i>
-                         <input type="text" class="form-control" placeholder="Search&hellip;">
+<div class="container-fluid">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="col-sm-5  mb-2"><h2>Master <b>Departement</b></h2></div>
+                    <div class="d-flex justify-content-between">
+                        <div class="search-box w-50">
+                            <i class="material-icons">&#xE8B6;</i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                        </div>
+                        <button type="button" class="btn btn-info add-new shadow" data-toggle="modal" data-target="#add_departemen"><i class="fa fa-plus"></i> Add Departement</button>
                     </div>
                 </div>
-            </div>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr class="bg-primary">
