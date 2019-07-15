@@ -18,6 +18,7 @@ class MasterProduct extends Migration
             $table->string("nama");
             $table->string("suplier");
             $table->string("type");
+            $table->string("price_list");
             $table->date("tahun_perakitan");
             $table->integer("stock");
             $table->boolean("non_aktif")->default(false);

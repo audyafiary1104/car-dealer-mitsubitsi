@@ -1,31 +1,30 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
+<div class="container-fluid">
+        <div class="table-wrapper shadow">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4" style="margin-bottom:10px;"><h2>Serah Terima Bpkb</h2></div>
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-info add-new" style="margin-bottom:-100px;margin-left:560px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add Customer</button>
+                <div class="col-sm-5 mb-2">
+                    <h2>Terima <b>Bpkb</b></h2>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="search-box w-50">
+                        <i class="material-icons">&#xE8B6;</i>
+                        <input type="text" class="form-control shadow" placeholder="Search&hellip;">
                     </div>
-                    <div class="col-sm-12">
-                        <div class="search-box" style="margin-right:375px;width:65%;">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
-                    </div>
+                    <a href="" class="btn btn-info add-new shadow"><i class="fa fa-plus"></i> Add Customer</a>
                 </div>
             </div>
-            <table class="table table-striped table-hover table-bordered">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover table-bordered">
                 <thead>
-                    <tr>
-                        <th>No Spk</th>
-                        <th>No Customer</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>Type Kendaraan</th>
-                        <th>No Stnk</th>
-                        <th class="text-center">Actions</th>
+                    <tr class="bg-primary">
+                        <th class="text-white shadow">No Spk</th>
+                        <th class="text-white shadow">No Customer</th>
+                        <th class="text-white shadow">Nama</th>
+                        <th class="text-white shadow">Alamat</th>
+                        <th class="text-white shadow">Type Kendaraan</th>
+                        <th class="text-white shadow">No Stnk</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,14 +35,16 @@
                         <td>Kas Besar</td>
                         <td>BY0001</td>
                         <td>Kas Besar</td>
-                        <td>
-                            <a href="#" style="margin-left:28%;" class="edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="color:aqua;text-shadow:1px 1px 3px black"data-toggle="tooltip" title="Edit"></i></a>
-                            <a href="#"class="delete" title="Delete" ><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
+                        <td class="text-center">
+                            <a href="" data-target="#custommer_edit" class="btn btn-warning btn-sm shadow"
+                                data-toggle="modal"><i class="fa fa-pencil fa-lg text-white"></i></a>
+                            <a href="" class="btn btn-danger btn-sm shadow"><i
+                                    class="fa fa-times fa-lg text-white"></i></a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
+        </div>
             <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
@@ -53,11 +54,10 @@
                     <li class="page-item active"><a href="#" class="page-link">3</a></li>
                     <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a>
+                    </li>
                 </ul>
             </div>
-        </div>
     </div>
-
-
+</div>
 @endsection

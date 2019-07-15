@@ -1,15 +1,15 @@
-<div class="modal fade edit_karyawans" id="edit_karyawan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary shadow">
-                <h5 class="modal-title text-white" id="exampleModalLabel">Edit Karyawan</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+@extends('layouts.admin.master')
+@section('content')
+<div class="container-fluid">
+    <div class="table-responsive">
+        <div class="table-wrapper shadow">
+            <div class="table-title">
+                <div class="col-sm-4 mb-4">
+                    <h2>Tambah <b>Karyawan</b></h2>
+                </div>
             </div>
-            <div class="modal-body">
-                <form class="edit_karyawan" method="get">
+            <form action="{{url('tambah_karyawan')}}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Name</label>
                     <input type="text" class="form-control" name="nama" id="exampleFormControlInput1"
@@ -44,11 +44,11 @@
                     <input type="text" class="form-control" name="nama_atasan" id="exampleFormControlInput1"
                         placeholder="Nama Atasan ">
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary shadow">Save changes</button>
-            </div>
+                <div class="d-flex flex-row-reverse">
+                    <button type="submit" class="btn btn-primary shadow">Save changes</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
+@endsection

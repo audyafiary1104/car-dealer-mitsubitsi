@@ -34,9 +34,10 @@ class TransaksiController extends Controller
             'tanggal_input' => $time,
             'nilai_versekot' => $request->nilai_versekot,
             'payment' => $request->payment,
+            'pembayaran_paling_lambat' => $request->pembayaran_paling_lambat
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
-        return redirect()->back();
+        return redirect()->route('pengajuan_smk');
     }
     public function pengajuan_index(Request $request)
     {
@@ -92,7 +93,7 @@ class TransaksiController extends Controller
     }
     public function confirm_bm_stj($id)
     {   $get = DB::table('pengajuan_smk')->where('id',$id)->first();
-        $cust = DB::table('master_custommer')->where('id',$get->id_cust)->first();
+        $cust = DB::table('master_custommer')->where('id',4)->first();
         $some_date = Carbon::now()->toDateTimeString();
         $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
@@ -111,5 +112,15 @@ class TransaksiController extends Controller
        Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
        return redirect()->back();
    }
+
+   public function tambah_psmk_page()
+{
+    $cust = DB::table('master_custommer')->get();
+    $product = DB::table('master_product')->get();
+
+    $sales = DB::table('jabatans')->where('nama_jabatan','sales')->get();
+    return view('transaksi_finance.smk.tambahdata.tambah_psmk',compact('cust','product','sales'));
+
+}
     }
 

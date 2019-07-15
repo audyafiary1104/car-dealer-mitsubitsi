@@ -1,24 +1,24 @@
 @extends('layouts.admin.master')
 @section('content')
 <div class="container-fluid">
-        <div class="table-responsive">
-            <div class="table-wrapper">
+            <div class="table-wrapper shadow">
                 <div class="table-title">
                     <div class="col-sm-4 mb-2"><h2>Master <b>Level Jabatan</b></h2></div>
                     <div class="d-flex justify-content-between">
                         <div class="search-box w-50">
                             <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                            <input type="text" class="form-control shadow" placeholder="Search&hellip;">
                         </div>
-                        <button type="button" class="btn btn-info add-new shadow" data-toggle="modal" data-target="#add_level_jabatan"><i class="fa fa-plus"></i> Add Level Jabatan</button>
+                        <a href="{{route('addleveljabatan')}}" class="btn btn-info add-new shadow"><i class="fa fa-plus"></i> Add Level Jabatan</a>
                     </div>
                 </div>
-            <table class="table table-striped table-hover table-bordered">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover table-bordered">
                 <thead>
-                    <tr>
-                        <th>Kode Level Jabatan</th>
-                        <th>Nama Level Jabatan</th>
-                        <th class="text-center">Actions</th>
+                    <tr class="bg-primary">
+                        <th class="text-white shadow">Kode Level Jabatan</th>
+                        <th class="text-white shadow">Nama Level Jabatan</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,14 +26,15 @@
                     <tr>
                     <td>CST0001</td>
                         <td>{{$level_jabatan->nama}}</td>
-                        <td>
-                            <a href="#add_level_jabatan" style="margin-left:28%;" class="edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="text-shadow:1px 1px 3px black"data-toggle="tooltip" title="Edit"></i></a>
-                            <a href="#mymodal"class="delete" title="Delete" ><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black"></i></a>
+                        <td class="text-center">
+                            <a href="#level_jabatan_edit" class="btn btn-warning btn-sm shadow" data-toggle="modal"><i class="fa fa-pencil fa-lg text-white"></i></a>
+                            <a href="{{route('del_lvl',['id'=>$level_jabatan->id])}}"class="btn btn-sm btn-danger shadow"><i class="fa fa-times fa-lg text-white"></i></a>
                         </td>
                     </tr>
                    @endforeach
                 </tbody>
             </table>
+        </div>
             <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
@@ -48,7 +49,6 @@
             </div>
         </div>
     </div>
-    @include('master.modal.add_level_jabatan')
     @include('master.modal.edit_level_jabatan')
 
 @endsection

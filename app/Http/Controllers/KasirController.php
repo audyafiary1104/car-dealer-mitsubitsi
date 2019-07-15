@@ -25,7 +25,9 @@ class KasirController extends Controller
         'tanggal_pembuat'=> $time,
         'nama_bank' => $request->nama_bank,
         'type_pembayaran' => $request->jenis_pembayaran,
-        'tanggal_jatuh_tempo' =>$request->tanggal_jatuh_tempo,
+        'dibayar' => $request->dibayar,
+        'sisa' => $request->nilai_versekot - $request ->dibayar,
+        'tanggal_jatuh_tempo' => $request->tanggal_jatuh_tempo,
         ]);
         $user = DB::table('pengajuan_smk')->where('id',$request->id)->update([
             'status_pembayaran' => $request->jenis_pembayaran
@@ -44,7 +46,7 @@ class KasirController extends Controller
         $cust = $request->nama;
 
         $user = explode('|',$cust);
-        
+
         $alamat = DB::table('master_custommer')->find($user[0]);
         DB::table('titipan')->insert([
             'nama_cust' => $user[1],
@@ -54,8 +56,14 @@ class KasirController extends Controller
             'tanggal_pembuat' => $request->tanggal,
         ]);
         Alert::success('Success', 'Data berhasil ditambahkan');
-        return redirect()->back();
+        return redirect()->route('titipan');
     }
+    public function titipan_add_page()
+    {
+        $cust = DB::table('master_custommer')->get();
+       return view('transaksi_finance.kasir.modal.titipan',compact('cust'));
+    }
+
     public function setor_giro()
     {
         $giro = DB::table('penerimaan_versekot')->where('type_pembayaran','giro')->Where('status_giro','belum Disetor')->get();
@@ -71,7 +79,7 @@ class KasirController extends Controller
     }
     public function giro_cair()
     {
-        $cair = DB::table('penerimaan_versekot')->where('type_pembayaran','giro')->Where('status_giro','Giro Disetor')->get();
+        $cair = DB::table('penerimaan_versekot')->get();
         return view('transaksi_finance.kasir.giro_cair',compact('cair'));
 
     }

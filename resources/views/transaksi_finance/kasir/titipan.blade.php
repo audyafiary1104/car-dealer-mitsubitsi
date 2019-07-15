@@ -1,48 +1,49 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
+<div class="container-fluid">
+        <div class="table-wrapper shadow">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-8">
-						<h2>Titipan</h2>
-					</div>
-					<div class="col-sm-12">
-                        <button type="button" class="btn btn-info add-new" style="margin-left:960px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
+                <div class="col-sm-4">
+                    <h2>Titipan</h2>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <a href="{{route('addpage')}}" class="btn btn-info add-new position-sticky shadow buttom-responsive"><i
+                            class="fa fa-plus"></i>
+                        Add Titipan</a>
                 </div>
             </div>
-            <table class="table table-striped table-bordered table-hover">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover table-bordered">
                 <thead>
-                    <tr>
-
-                        <th>No Titipan</th>
-                        <th>No Cust</th>
-                        <th>Nama</th>
-						<th>Alamat</th>
-                        <th>Nilai Titip</th>
-                        <th>Tanggal Titip</th>
-
-                        <th class="text-center">Actions</th>
+                    <tr class="bg-primary">
+                        <th class="text-white shadow">No Titipan</th>
+                        <th class="text-white shadow">No Cust</th>
+                        <th class="text-white shadow">Nama</th>
+                        <th class="text-white shadow">Alamat</th>
+                        <th class="text-white shadow">Nilai Titip</th>
+                        <th class="text-white shadow">Tanggal Titip</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    @foreach($titipan as $titipan)
+                        @foreach($titipan as $titipan)
                         <td>TIP/2019/0001</td>
                         <td>CUS0001</td>
                         <td>{{$titipan->nama_cust }}</td>
-						<td>{{$titipan->alamat}}</td>
+                        <td>{{$titipan->alamat}}</td>
                         <td>{{$titipan->nilai_titip}}</td>
                         <td>{{$titipan->tanggal_pembuat}}</td>
-                        <td>
-                        <a href="#" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
+                        <td class="text-center">
+                        <a href="#" class="btn btn-info btn-sm shadow" data-target="#"><i
+                                    class="fa fa-eye text-white fa-lg"></i></a>
                         </td>
                     </tr>
-                @endforeach
+                    @endforeach
                 </tbody>
             </table>
-			<div class="clearfix">
+        </div>
+            <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#">Previous</a></li>
@@ -56,12 +57,4 @@
             </div>
         </div>
     </div>
-<script>
-    $(document).ready(function () {
-        $(document).on('click','.add-new',function(){
-            $('#titipan').modal()
-        });
-    });
-</script>
-@include('transaksi_finance.kasir.modal.titipan')
 @endsection

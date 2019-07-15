@@ -4839,6 +4839,7 @@ a.close.disabled {
     margin-right: .25rem; }
 
 .modal-scrollbar-measure {
+display:none;
   position: absolute;
   top: -9999px;
   width: 50px;

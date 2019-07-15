@@ -2,8 +2,8 @@
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Bayar Versekot</h5>
+            <div class="modal-header bg-primary shadow">
+                <h5 class="modal-title text-white" id="exampleModalLabel">Bayar Versekot</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -26,11 +26,12 @@
 
                     <div class="form-group" id="tunai">
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
-                        <input type="text"  name="nilai_versekot" class="form-control nilai_versekot"
-                            name="nilai_versekot" required>
+                        <input type="number" class="form-control nilai_versekot" name="nilai_versekot" required>
                         <label for="exampleFormControlInput1">Dibayar</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="number" />
+
                     </div>
+
 
                     <div class="form-group" id="giro">
                         <label for="exampleFormControlInput1">Nama Bank</label>
@@ -42,12 +43,19 @@
                         <label for="exampleFormControlInput1">Nomer Giro</label>
                         <input class="form-control" id="exampleFormControlInput1" name="nomer_giro" type="text" />
                         <label for="exampleFormControlInput1">Tanggal Jatuh Tempo</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="tanggal_jatuh_tempo" type="date" />
+                        <input class="form-control" id="exampleFormControlInput1" name="tanggal_jatuh_tempo"
+                            type="date" />
+                            <label for="exampleFormControlInput1">Dibayar</label>
+                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="text" />
+
+                        <label for="exampleFormControlInput1">Nilai Versekot</label>
+                        <input class="form-control nilai_versekot" name="nilai_versekot" type="text" required />
                     </div>
+
+
                     <div class="form-group" id="titipan">
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
-                        <input class="form-control nilai_versekot" id="nilai_versekot" name="nilai_versekot"
-                            type="text" disabled/>
+                        <input class="form-control nilai_versekot" name="nilai_versekot" type="text" disabled />
                         <label for="exampleFormControlInput1">Nama Cust</label>
                         <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
                         <label for="exampleFormControlInput1">Nilai Titipan</label>
@@ -57,7 +65,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary">ADD</button>
+                <button type="submit" class="btn btn-primary shadow">Save Change</button>
             </div>
             </form>
         </div>

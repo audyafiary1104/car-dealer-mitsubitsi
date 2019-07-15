@@ -8,9 +8,6 @@
         <div class="search-form d-none d-lg-inline-block">
             <div class="input-group">
             </div>
-            <div id="search-results-container">
-                <ul id="search-results"></ul>
-            </div>
         </div>
 
         <div class="navbar-right ">

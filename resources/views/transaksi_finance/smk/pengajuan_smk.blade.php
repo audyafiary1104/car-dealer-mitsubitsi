@@ -1,49 +1,48 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
+<div class="container-fluid">
+        <div class="table-wrapper shadow">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-4">
-						<h2>Pengajuan <b>Smk</b></h2>
-					</div>
-					<div class="col-sm-12">
-                        <button type="button" class="btn btn-info add-new" style="margin-left:960px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#tambah_smk"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
+                <div class="col-sm-4">
+                    <h2>Pengajuan <b>SMK</b></h2>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <a href="{{route('tambah_psmk')}}" class="btn btn-info add-new position-sticky shadow buttom-responsive"><i
+                            class="fa fa-plus"></i> Add Pengajuan SMK</a>
                 </div>
             </div>
-            <table class="table table-striped table-bordered table-hover">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered table-hover">
                 <thead>
-                    <tr>
-
-                        <th>No Smk</th>
-                        <th>Nama Peminat</th>
-						<th>Address</th>
-                        <th>Nama Sales</th>
-                        <th>Pembayaran</th>
-                        <th>Harga</th>
-                        <th class="text-center">Actions</th>
+                    <tr class="bg-primary">
+                        <th class="text-white shadow">No Smk</th>
+                        <th class="text-white shadow">Nama Peminat</th>
+                        <th class="text-white shadow">Address</th>
+                        <th class="text-white shadow">Nama Sales</th>
+                        <th class="text-white shadow">Pembayaran</th>
+                        <th class="text-white shadow">Harga</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-			@foreach($smk as $smk)
+                        @foreach($smk as $smk)
                         <td>SMK0001</td>
                         <td>{{$smk->nama_cust}}</td>
-						<td>{{$smk->alamat}}</td>
+                        <td>{{$smk->alamat}}</td>
                         <td>{{$smk->nama_sales}}</td>
                         <td>{{$smk->payment}}</td>
                         <td>{{$smk->nilai_versekot}}</td>
-
-                        <td>
-                            <a href="#editEmployeeModal" style="margin-left:28%;" class="edit" data-toggle="modal"><i class="fa fa-pencil fa-lg" style="text-shadow:1px 1px 3px black" data-toggle="tooltip" title="Edit"></i></a>
-                            <a href="/pengajuan_smk/del/{{$smk->id}}" style="margin-left:2%;" class="delete"><i class="fa fa-times-circle fa-lg" style="text-shadow:1px 1px 3px black" data-toggle="tooltip" title="Delete"></i></a>
+                        <td class="text-center">
+                            <a data-target="#editEmployeeModal" data-toggle="modal" class="btn btn-warning btn-sm shadow"><i class="fa fa-pencil text-white"></i></a>
+                            <a href="/pengajuan_smk/del/{{$smk->id}}" class="btn btn-sm btn-danger shadow"><i class="fa fa-times-circle fa-lg text-white"></i></a>
                         </td>
                     </tr>
-                   @endforeach
+                    @endforeach
                 </tbody>
             </table>
-			<div class="clearfix">
+        </div>
+            <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#">Previous</a></li>
@@ -57,5 +56,4 @@
             </div>
         </div>
     </div>
-        @include('transaksi_finance.smk.modal.tambah_psmk');
-@endsection
+    @endsection

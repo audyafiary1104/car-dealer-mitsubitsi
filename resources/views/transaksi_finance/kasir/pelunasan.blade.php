@@ -1,45 +1,47 @@
 @extends('layouts.admin.master')
 @section('content')
-<div class="container">
-        <div class="table-wrapper">
+<div class="container-fluid">
+        <div class="table-wrapper shadow">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-8">
-						<h2> Pelunasan<b></b></h2>
-					</div>
-					<div class="col-sm-12">
-                        <button type="button" class="btn btn-info add-new" style="margin-left:960px;box-shadow:1px 1px 3px black;"  data-toggle="modal" data-target="#"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
+                <div class="col-sm-4">
+                    <h2> Pelunasan<b></b></h2>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <a href="#"
+                        class="btn btn-info add-new position-sticky shadow buttom-responsive"><i class="fa fa-plus"></i>
+                        Add Pelunasan</a>
                 </div>
             </div>
-            <table class="table table-striped table-bordered table-hover">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover table-bordered">
                 <thead>
-                    <tr>
-
-                        <th>No Transaksi</th>
-                        <th>No Smk</th>
-						<th>Address</th>
-                        <th>Nilai</th>
-                        <th>Pembayaran</th>
-                        <th class="text-center">Actions</th>
+                    <tr class="bg-primary">
+                        <th class="text-white shadow">No Transaksi</th>
+                        <th class="text-white shadow">No Smk</th>
+                        <th class="text-white shadow">Address</th>
+                        <th class="text-white shadow">Nilai</th>
+                        <th class="text-white shadow">Pembayaran</th>
+                        <th class="text-center text-white shadow">Actions</th>
                     </tr>
-                </thead>
+            </thead>
                 <tbody>
                     <tr>
                         <td>BOM/20019/0001</td>
                         <td>SMK0001</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
+                        <td>89 Chiaroscuro Rd, Portland, USA</td>
                         <td>Rp.1.000.000</td>
                         <td>GIRO</td>
-                        <td>
-                        <a href="#" style="margin-left:28%;" data-toggle="modal" data-target="#edit_jabatan"><i class="fa fa-print fa-lg" style="text-shadow:1px 1px 3px black;color:black;"data-toggle="tooltip" title="Print"></i></a>
-                        <a href="#" style="margin-left:5%;"  data-target="#"><i class="fa fa-eye fa-lg" style="text-shadow:1px 1px 3px black;color:aqua;" data-toggle="tooltip" title="Lihat Detail"></i></a>
+                        <td class="text-center">
+                            <a href="#" class="btn btn-dark btn-sm shadow" target="_blank"><i
+                                    class="fa fa-print text-white fa-lg"></i></a>
+                            <a href="#" class="btn btn-info btn-sm shadow" data-target="#"><i
+                                    class="fa fa-eye text-white fa-lg"></i></a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
-			<div class="clearfix">
+        </div>
+            <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#">Previous</a></li>
@@ -53,26 +55,4 @@
             </div>
         </div>
     </div>
-
-	<!-- Delete Modal HTML -->
-	<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form>
-					<div class="modal-header">
-						<h4 class="modal-title">Delete Employee</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
-						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>This action cannot be undone.</small></p>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-danger" value="Delete">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 @endsection

@@ -388,7 +388,7 @@ button:focus {
 }
 .text_uppercase * {
 	text-transform: uppercase;
-}	
+}
 .form-control,
 .form-control:focus,
 .custom-file-input:focus ~ .custom-file-label {
@@ -935,7 +935,7 @@ button:focus {
 	background-color: #E7EDF3;
 	z-index: 999;
 	-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-	-moz-transform: translateX(0); 
+	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);  /* IE 9 */
 	transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
 }
@@ -952,7 +952,7 @@ button:focus {
 	-moz-transform: translateX(-100%);
 	-ms-transform: translateX(-100%);  /* IE 9 */
 	transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
-	-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 .loaded .loader-section.section-right {
@@ -960,7 +960,7 @@ button:focus {
 	-ms-transform: translateX(100%);  /* IE 9 */
 	-moz-transform: translateX(100%);
 	transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
-	-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+	-webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 /*===================================*
@@ -1018,13 +1018,13 @@ button:focus {
 .dark_skin .cart_list li {
 	border-color: #ddd;
 }
-.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu li a.active, 
-.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu li a:hover, 
-.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu > ul > li:hover > a, 
+.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu li a.active,
+.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu li a:hover,
+.dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu > ul > li:hover > a,
 .dark_skin .navbar-expand-lg .navbar-nav .dropdown-menu > ul > .mega-menu-col ul > li:hover > a {
 	color: #FFBC09;
 }
-.dark_skin .navbar-expand-lg .navbar-nav .dropdown-item, 
+.dark_skin .navbar-expand-lg .navbar-nav .dropdown-item,
 .dark_skin .navbar-expand-lg .navbar-nav .dropdown-header,
 .dark_skin .cart_quantity,
 .dark_skin .cart_total {
@@ -1067,7 +1067,7 @@ button:focus {
 	padding: 25px 10px;
 	text-transform: uppercase;
 }
-.navbar-expand-lg .navbar-nav > li > a.active, 
+.navbar-expand-lg .navbar-nav > li > a.active,
 .navbar-expand-lg .navbar-nav > li:hover > a {
 	color: #FFBC09;
 }
@@ -1134,8 +1134,8 @@ button:focus {
 .dropdown-item.active, .dropdown-item:active {
 	background-color: transparent;
 }
-.navbar-expand-lg .navbar-nav.attr-nav .dropdown-menu li a.active, 
-.navbar-expand-lg .navbar-nav.attr-nav .dropdown-menu li a:hover, 
+.navbar-expand-lg .navbar-nav.attr-nav .dropdown-menu li a.active,
+.navbar-expand-lg .navbar-nav.attr-nav .dropdown-menu li a:hover,
 .navbar-expand-lg .navbar-nav.attr-nav .dropdown-menu > ul > li:hover > a {
 	background-color: rgba(0,0,0,0);
 }
@@ -1144,7 +1144,7 @@ button:focus {
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu li a.active,
 .navbar-expand-lg .navbar-nav .dropdown-menu li a:hover,
-.navbar-expand-lg .navbar-nav .dropdown-menu > ul > li:hover > a, 
+.navbar-expand-lg .navbar-nav .dropdown-menu > ul > li:hover > a,
 .navbar-expand-lg .navbar-nav .dropdown-menu > ul > .mega-menu-col ul > li:hover > a {
 	color: #FFBC09;
 }
@@ -1199,7 +1199,7 @@ button:focus {
 .nav-fixed .navbar-expand-lg .attr-nav li .nav-link,
 .hover_menu_style2.nav-fixed  .navbar-expand-lg .navbar-nav.attr-nav > li > .nav-link {
 	padding: 15px 10px;
-	margin: 0; 
+	margin: 0;
 }
 .header_wrap.nav-fixed {
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -1610,7 +1610,7 @@ header.light_skin.nav-fixed .social_icons li a:hover {
 }
 .top-header.light_skin .header_list li a:hover,
 .top-header.light_skin .contact_detail li a:hover,
-.social_white .social_icons li a:hover, 
+.social_white .social_icons li a:hover,
 .social_white.social_icons li a:hover {
 	color: #FFBC09;
 }
@@ -2874,7 +2874,7 @@ footer .widget_title {
     border-bottom: 1px solid #dee2e6;
 }
 .nav-tabs li.nav-item {
-   margin-right: 20px 
+   margin-right: 20px
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:hover {
@@ -2991,7 +2991,7 @@ footer .widget_title {
 .widget_categories .categories_num {
 	float: right;
 }
-.widget_categories ul li, 
+.widget_categories ul li,
 .widget_archive ul li {
 	padding-bottom: 15px;
 	line-height: normal;
