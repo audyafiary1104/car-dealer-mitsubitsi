@@ -193,6 +193,18 @@ class SmkController extends Controller {
        return redirect()->back();
     }
 
+    public function edit_product($id,Request $request)
+    {
+        DB::table('master_departement')->where('id',$id)->update([
+         'nama'=> $request->nama,
+         'tahun_perakitan'=> $request->tahun_perakitan,
+         'suplier'=> $request->suplier,
+         'type'=> $request->type,
+         'stock'=> $request->stock,
+         'price_list' => $request->price_list
+        ]);
+        return redirect()->back();
+    }
 
     public function add_dpt(Request $request) {
         DB::table('master_departement')->insert([

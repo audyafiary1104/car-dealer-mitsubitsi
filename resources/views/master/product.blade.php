@@ -46,7 +46,7 @@
                         @endif
                         <td>{{$product -> price_list}}</td>
                         <td class="text-center">
-                            <a data-target="#edit_jabatan" data-toggle="modal" class="btn btn-warning btn-sm shadow"><i class="fa fa-pencil text-white"></i></a>
+                            <a class="btn btn-warning btn-sm shadow edit-item" value="{{$product->id}}"><i class="fa fa-pencil text-white"></i></a>
                             <a href="{{route('del_product',['id'=>$product->id])}}" class="btn btn-sm btn-danger shadow"><i class="fa fa-times text-white"></i></a>
                         </td>
                     </tr>
@@ -68,4 +68,15 @@
         </div>
     </div>
 </div>
+@include('master.modal.edit_product')
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.edit-item', function () {
+            var i = $(this).attr("value");
+            $(".edit_producct").attr('action', "/edit_product/" + i);
+            $(".edit_prod").modal();
+        });
+    });
+
+</script>
 @endsection

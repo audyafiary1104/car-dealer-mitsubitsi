@@ -37,6 +37,7 @@ Route::post('/product_add', 'SmkController@Product');
 Route::get('Product','SmkController@product_index')->name('product');
 Route::get('tambah_product','SmkController@tambah_product_page')->name('tambahproduct');
 Route::get('del_product{id}','SmkController@del_product')->name('del_product');
+Route::get('/edit_product/{id}','SmkController@edit_product');
 
 Route::get('/Departement', 'SmkController@departement_index')->name('departement');
 Route::post('add_dpt','SmkController@add_dpt');
