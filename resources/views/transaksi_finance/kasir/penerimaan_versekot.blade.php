@@ -32,8 +32,10 @@
                             <a  class="btn btn-success btn-sm edit-item shadow text-white"
                                 data-id_cust="{{$penerimaaan->id_cust}}" data-target="{{$penerimaaan->id}}"
                                 value="{{$penerimaaan->nilai_versekot}}" data-toggle="modal"><i class="fa fa-money fa-lg text-white pr-1"></i>Bayar</a>
-                            @else
-                            <a href="#" class="btn btn-dark btn-sm  shadow" data-toggle="modal" data-target="#"><i
+                            @elseif($penerimaaan->status_pembayaran == 'giro' && $penerimaaan->status_giro != 'Giro cair')
+                            <a  class="btn btn-success btn-sm  shadow text-white"></i>Belum Dicairkan</a>
+                         @else
+                         <a href="#" class="btn btn-dark btn-sm  shadow" data-toggle="modal" data-target="#"><i
                                     class="fa fa-print fa-lg text-white shadow" data-toggle="tooltip"></i></a>
                             @endif
                         </td>
@@ -58,6 +60,7 @@
     </div>
     <script>
         $(document).ready(function () {
+           
             $(document).on('click', '.edit-item', function () {
                 var i = $(this).attr("value");
                 var a = $(this).data("target");

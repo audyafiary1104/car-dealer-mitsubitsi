@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Tahun</label>
-                    <input type="text" class="form-control" name="tahun" id="exampleFormControlInput1"
+                    <input type="text" class="form-control" disabled name="tahun" id="tahun"
                         placeholder="Nama">
                 </div>
                 <div class="form-group">
@@ -96,21 +96,16 @@
                         placeholder="Nama">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Type Pembayaran</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="payment">
-                        <option value="tunai">Tunai</option>
-                        <option value="kredit">Kredit</option>
+                    <label for="exampleFormControlSelect1">Jenis Pembayaran</label>
+                    <select class="form-control" id="jenis_pembayaran" name="payment">
+                        <option value="of_the_road">of the Road</option>
+                        <option value="On_the_road">On the road</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="chkPassport">
-                        <input type="checkbox" id="chkPassport" />
-                        Apakah Menggunakan Of the road
-                    </label>
-                    <div id="dvPassport" style="display: none">
-                        Harga Of the road:
-                        <input type="number" name="of-theroad" id="txtPassportNumber" />
-                    </div>
+                <div class="form-group" id="bbn">
+                    <label for="exampleFormControlInput1">BBN</label>
+                    <input type="number" class="form-control" name="bbn" 
+                        placeholder="Nama">
                 </div>
                 <div class="d-flex flex-row-reverse">
                     <button type="submit" class="btn btn-primary shadow">Save changes</button>
@@ -121,6 +116,14 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
+        $('#bbn').hide();
+        $('#jenis_pembayaran').change(function () {
+            if ($('#jenis_pembayaran').val() == 'On_the_road') {
+                $('#bbn').show();
+            }else if($('#jenis_pembayaran').val() == 'of_the_road'){
+                $('#bbn').hide();
+            }
+        });
         $('#merk').click(function (e) {
             var selectedCCountry =
                 $(this).children("option:selected").val();
@@ -137,6 +140,8 @@
                 data: pecah[0],
                 success: function (data) {
                     $("#type").val(data.type);
+                    $("#tahun").val(data.tahun_perakitan);
+
                 },
             });
         });

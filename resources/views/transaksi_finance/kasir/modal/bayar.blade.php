@@ -28,7 +28,7 @@
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
                         <input type="number" class="form-control nilai_versekot" name="nilai_versekot" required>
                         <label for="exampleFormControlInput1">Dibayar</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="number" />
+                        <input class="form-control" id="exampleFormControlInput1" name="dibayar_tunai" type="number" />
 
                     </div>
 
@@ -46,7 +46,7 @@
                         <input class="form-control" id="exampleFormControlInput1" name="tanggal_jatuh_tempo"
                             type="date" />
                             <label for="exampleFormControlInput1">Dibayar</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="dibayar" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="dibayar_giro" type="text" />
 
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
                         <input class="form-control nilai_versekot" name="nilai_versekot" type="text" required />
@@ -57,9 +57,9 @@
                         <label for="exampleFormControlInput1">Nilai Versekot</label>
                         <input class="form-control nilai_versekot" name="nilai_versekot" type="text" disabled />
                         <label for="exampleFormControlInput1">Nama Cust</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="nama_cust" type="text" />
                         <label for="exampleFormControlInput1">Nilai Titipan</label>
-                        <input class="form-control" id="exampleFormControlInput1" name="otherField" type="text" />
+                        <input class="form-control" id="exampleFormControlInput1" name="nilai_titipan" type="text" />
 
                     </div>
             </div>

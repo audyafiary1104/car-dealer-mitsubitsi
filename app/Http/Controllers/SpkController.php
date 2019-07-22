@@ -20,6 +20,8 @@ public function spk_index()
         ->join('master_custommer','pengajuan_smk.id_cust','=','master_custommer.id')
         ->join('penerimaan_versekot','pengajuan_smk.id','=','pengajuan_smk.id')
         ->where('spk.id',$id)->first();
-        return view('print_spk',compact('spk'));
+        $pdf = PDF::loadview('print_spk',['spk'=>$spk]);
+        return $pdf->stream();
+
     }
 }

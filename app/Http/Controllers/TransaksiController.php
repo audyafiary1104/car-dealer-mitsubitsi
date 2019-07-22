@@ -82,8 +82,8 @@ class TransaksiController extends Controller
     }
     public function confirm_bm()
     {
-        $conf_spv = DB::table('pengajuan_smk')->where('status_pembayaran','!=','Belum Terbayar')
-        ->orWhereNull('status_bm')->get();
+        $conf_spv = DB::table('pengajuan_smk')->where('status_pembayaran','==','Belum Terbayar')
+        ->Orwhere('status_bm',null)->get();
         return view('transaksi_finance.smk.konfirmasi_smk',compact('conf_spv'));
     }
     public function pengajuan_index_ajax($id)
@@ -93,22 +93,14 @@ class TransaksiController extends Controller
     }
     public function confirm_bm_stj($id)
     {   $get = DB::table('pengajuan_smk')->where('id',$id)->first();
-        $cust = DB::table('master_custommer')->where('id',4)->first();
+        $cust = DB::table('master_custommer')->where('id',$get->id_cust)->first();
         $some_date = Carbon::now()->toDateTimeString();
         $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
         $smk = DB::table('pengajuan_smk')->where('id',$id)->update([
            'status_bm' => 'setuju'
         ]);
-            DB::table('spk')->insert([
-            'nama_cust' => $get->nama_cust,
-            'alamat'=> $get->alamat,
-            'type_kendaraan'=> $get->type,
-            'pembayaran'=> $get->status_pembayaran,
-            'ktp'=> $cust->nik,
-            'tanggal_pembuat'=> $time,
-            'id_smk'=> $id,
-            ]);
+           
        Alert::success('Success', 'Data berhasil Disetujui Silakan Cek Riwayat');
        return redirect()->back();
    }
