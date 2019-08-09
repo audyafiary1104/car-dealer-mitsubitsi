@@ -61,7 +61,15 @@ class SmkController extends Controller {
     }
 
     public function add_jabatan(Request $request) {
+        $k = DB::table('jabatans')->max('kode_jabatan');
+        $no = 1;
+        if($k){
+            $kode = "JBT".sprintf("%03s", abs($k + 1));
+        }else{
+            $kode = "JBT".sprintf("%03s",abs($no));
+        }
         DB::table('jabatans')->insert([
+            'kode_jabatan' => $kode,
             'nama_jabatan' => $request->jabatan,
             'role' => $request->role,
             'nama' => $request->show_user,
@@ -101,7 +109,15 @@ class SmkController extends Controller {
     }
 
     public function add_custommer(Request $request) {
+        $k = DB::table('master_custommer')->max('kode_custommer');
+        $no = 1;
+        if($k){
+            $kode = "CST".sprintf("%03s", abs($k + 1));
+        }else{
+            $kode = "CST".sprintf("%03s",abs($no));
+        }
         DB::table('master_custommer')->insert([
+                'kode_custommer' => $kode,
                  'nik'=> $request->nik,
                  'nama'=> $request->nama,
                 'alamat'=> $request->alamat,
@@ -162,7 +178,15 @@ class SmkController extends Controller {
     }
 
     public function product(Request $request) {
+        $k = DB::table('master_product')->max('kode_product');
+        $no = 1;
+        if($k){
+            $kode = "PROD".sprintf("%03s", abs($k + 1));
+        }else{
+            $kode = "PROD".sprintf("%03s",abs($no));
+        }
         DB::table('master_product')->insert([
+        'kode_product' => $kode,
          'nama'=> $request->nama,
          'tahun_perakitan'=> $request->tahun_perakitan,
          'suplier'=> $request->suplier,

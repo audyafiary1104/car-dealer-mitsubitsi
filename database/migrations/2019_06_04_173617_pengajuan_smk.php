@@ -16,6 +16,7 @@ class PengajuanSmk extends Migration
         Schema::create('pengajuan_smk', function (Blueprint $table) {
             $table->increments("id");
             $table->string("nama_cust");
+            $table->string("kode_smk");
             $table->integer("id_sales");
             $table->integer("id_cust");
             $table->string("nama_sales");
@@ -27,6 +28,9 @@ class PengajuanSmk extends Migration
             $table->string("tahun");
             $table->string("nilai_versekot");
             $table->string("payment");
+            $table->string("jenis_payment");
+            $table->integer("bbn")->nullable();
+
             $table->date("tanggal_pemesan");
             $table->date("tanggal_input");
             $table->date("pembayaran_paling_lambat");

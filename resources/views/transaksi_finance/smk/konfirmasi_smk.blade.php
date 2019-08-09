@@ -23,7 +23,7 @@
                 <tbody>
                     @foreach($conf_spv as $bm)
                     <tr>
-                        <td>SMK0001</td>
+                        <td>{{$bm->kode_smk}}</td>
                         <td>{{$bm->nama_cust}}</td>
                         <td>{{$bm->alamat}}</td>
                         <td>{{$bm->nama_sales}}</td>

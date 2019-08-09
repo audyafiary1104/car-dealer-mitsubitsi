@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJabatansTable extends Migration
+class SerahTerima extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateJabatansTable extends Migration
      */
     public function up()
     {
-        Schema::create('jabatans', function (Blueprint $table) {
+        Schema::create('serah_terima_brjs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('kode_jabatan');
-            $table->string('nama_jabatan');
+            $table->integer('id_spk');
+            $table->string('no_spk');
+            $table->string('no_cust');
             $table->string('nama');
-            $table->string('nik');
-            $table->string('role');
-            $table->timestamps();
+            $table->string('alamat');
+            $table->string('type_kendaraan');
+            $table->string('warna');
+
         });
     }
 
@@ -31,6 +33,6 @@ class CreateJabatansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jabatans');
+        Schema::dropIfExists('serah_terima_brjs');
     }
 }

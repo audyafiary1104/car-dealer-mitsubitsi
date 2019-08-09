@@ -38,7 +38,7 @@
                 <tbody>
                     @foreach($cust as $customer)
                     <tr>
-                        <td>CST0001</td>
+                        <td>{{$customer->kode_custommer}}</td>
                         <td>{{$customer->nama}}</td>
                         <td>{{$customer->alamat}}</td>
                         <td>{{$customer->provinsi}}</td>

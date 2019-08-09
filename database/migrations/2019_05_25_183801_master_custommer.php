@@ -15,6 +15,7 @@ class MasterCustommer extends Migration
     {
         Schema::create('master_custommer', function (Blueprint $table) {
             $table->increments("id");
+            $table->string("kode_custommer");
             $table->string("nama");
             $table->string("nik", 50)->unique();
             $table->string("alamat");

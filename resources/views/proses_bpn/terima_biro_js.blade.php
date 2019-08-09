@@ -3,7 +3,7 @@
 <div class="container-fluid">
             <div class="table-wrapper shadow">
                 <div class="table-title">
-                    <div class="col-sm-5 mb-2"><h2>Master <b>Custommer</b></h2></div>
+                    <div class="col-sm-5 mb-2"><h2>Terima  <b>Biro Jasa</b></h2></div>
                     <div class="d-flex justify-content-between">
                         <div class="search-box w-50">
                             <i class="material-icons">&#xE8B6;</i>

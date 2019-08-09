@@ -18,6 +18,7 @@ Route::get('/Customer', 'SmkController@custommer_index')->name('custommer');
 Route::get('tambah_custommer','SmkController@tambah_custommer_page')->name('tambahcustommer');
 Route::get('del_custommer{id}','SmkController@del_custommer')->name('del_customer');
 Route::get('/edit_cust/{id}','SmkController@edit_custommer');
+Route::delete('myproductsDeleteAll', 'KasirController@deleteAll');
 
 Route::get('/karyawan','SmkController@karyawan')->name('karyawan');
 Route::get('/karyawan/del/{id}','SmkController@delete_karyawan');
@@ -102,6 +103,9 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/tambah_serah_terima', 'proses_bpn@serah_terima_add');
+Route::post('/tambah_serah_terima/ajax/{id}', 'proses_bpn@serah_terima_add_ajax');
+Route::post('/tambah_serah_terima/add', 'proses_bpn@serah_terima_post');
 
 Route::get('/giro_cair', 'KasirController@giro_cair');
 Route::get('/giro_cair/{id}', 'KasirController@cair_giro');

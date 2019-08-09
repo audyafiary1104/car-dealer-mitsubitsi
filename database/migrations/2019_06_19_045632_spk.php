@@ -16,6 +16,7 @@ class Spk extends Migration
         Schema::create('spk', function (Blueprint $table) {
             $table->increments("id");
             $table->integer("id_smk");
+            $table->string("kode_spk");
             $table->string("nama_cust");
             $table->string("alamat");
             $table->string("type_kendaraan");

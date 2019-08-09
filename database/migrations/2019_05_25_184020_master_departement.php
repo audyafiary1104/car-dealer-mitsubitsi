@@ -15,6 +15,7 @@ class MasterDepartement extends Migration
     {
         Schema::create('master_departement', function (Blueprint $table) {
             $table->increments("id");
+            $table->string("kode_dpt");
             $table->string("nama_dpt");
         });
     }

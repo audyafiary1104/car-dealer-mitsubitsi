@@ -15,10 +15,16 @@ class KasirController extends Controller
     }
    public function penerimaan_versekot(Request $request)
    {
-
         $smk = DB::table('pengajuan_smk')->where('id',$request->id)->first();
         $cust = DB::table('master_custommer')->where('id',$request->id_cust)->first();
-
+        $k = DB::table('spk')->max('kode_spk');
+        $Y = date("Y");
+        $no = 1;
+        if($k){
+            $kode = "BOM"."/".$Y.'/'.sprintf("%03s", abs($k + 1));
+        }else{
+            $kode = "BOM"."/".$Y.'/'.sprintf("%03s",abs($no));
+        }     
         $some_date = Carbon::now()->toDateTimeString();
         $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
@@ -35,6 +41,7 @@ class KasirController extends Controller
         'tanggal_jatuh_tempo' => $request->tanggal_jatuh_tempo,
         ]);
         DB::table('spk')->insert([
+            'kode_spk' => $kode,
             'nama_cust' => $smk->nama_cust,
             'alamat'=> $smk->alamat,
             'type_kendaraan'=> $smk->type,
@@ -68,6 +75,8 @@ class KasirController extends Controller
             'tanggal_jatuh_tempo' => $request->tanggal_jatuh_tempo,
             ]);
             DB::table('spk')->insert([
+            'kode_spk' => $kode,
+
                 'nama_cust' => $smk->nama_cust,
                 'alamat'=> $smk->alamat,
                 'type_kendaraan'=> $smk->type,
@@ -138,6 +147,13 @@ class KasirController extends Controller
         return view('transaksi_finance.kasir.giro_cair',compact('cair'));
 
     }
+    public function deleteAll(Request $request)
+    {
+       
+        dd($g);
+        // return response()->json(['success'=>"Products Deleted successfully."]);
+    }
+
     public function cair_giro($id)
     {
         $some_date = Carbon::now()->toDateTimeString();
@@ -146,6 +162,14 @@ class KasirController extends Controller
         $get = DB::table('penerimaan_versekot')->where('id',$id)->first();
         $smk = DB::table('pengajuan_smk')->where('id',$get->id_smk)->first();
         $cust = DB::table('master_custommer')->where('id',$get->id_cust)->first();
+        $k = DB::table('spk')->max('kode_spk');
+        $Y = date("Y");
+        $no = 1;
+        if($k){
+            $kode = "BOM"."/".$Y.'/'.sprintf("%03s", abs($k + 1));
+        }else{
+            $kode = "BOM"."/".$Y.'/'.sprintf("%03s",abs($no));
+        }      
         DB::table('penerimaan_versekot')->where('id',$id)->update([
             'status_giro' => 'Giro cair',
         ]);
@@ -153,6 +177,7 @@ class KasirController extends Controller
             'status_giro' => 'Giro cair',
         ]);   
         DB::table('spk')->insert([
+            'kode_spk' => $kode,
             'nama_cust' => $smk->nama_cust,
             'alamat'=> $smk->alamat,
             'type_kendaraan'=> $smk->type,

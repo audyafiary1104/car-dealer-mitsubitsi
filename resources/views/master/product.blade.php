@@ -33,7 +33,7 @@
                 <tbody>
                     @foreach($product as $product)
                     <tr>
-                        <td>BRG0001</td>
+                        <td>{{$product->kode_product}}</td>
                         <td>{{$product -> nama}}</td>
                         <td>{{$product -> suplier}}</td>
                         <td>{{$product -> type}}</td>

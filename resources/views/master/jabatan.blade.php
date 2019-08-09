@@ -26,7 +26,7 @@
                 <tbody>
                     @foreach($jabatan as $jb)
                     <tr>
-                        <td>JBT0001</td>
+                        <td>{{$jb->kode_jabatan}}</td>
                         <td>{{$jb->nama}}</td>
                         <td>{{$jb->nama_jabatan}}</td>
                         <td>{{$jb->role}}</td>

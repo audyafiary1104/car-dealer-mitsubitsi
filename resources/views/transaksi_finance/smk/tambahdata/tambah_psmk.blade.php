@@ -56,10 +56,14 @@
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Type</label>
                     <input type="text" disabled class="form-control" name="type" id="type" maxlength="3">
+                    <input type="hidden"  class="form-control" name="type_dta" id="type_dta" maxlength="3">
+                
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Tahun</label>
                     <input type="text" class="form-control" disabled name="tahun" id="tahun"
+                        placeholder="Nama">
+                        <input type="hidden" class="form-control"  name="tahun" id="tahun_dta"
                         placeholder="Nama">
                 </div>
                 <div class="form-group">
@@ -91,9 +95,11 @@
                     <input type="date" class="form-control" name="pembayaran_paling_lambat" id="exampleFormControlInput1"
                         placeholder="Nama">
                 </div><div class="form-group">
-                    <label for="exampleFormControlInput1">Tanggal Pemesan</label>
-                    <input type="date" class="form-control" name="tanggal_pemesan" id="exampleFormControlInput1"
-                        placeholder="Nama">
+                    <label for="exampleFormControlInput1">Type Pembayaran</label>
+                    <select class="form-control" id="type_pembayaran" name="type_pembayaran">
+                        <option value="tunai">Tunai</option>
+                        <option value="kredit">Kredit</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Jenis Pembayaran</label>
@@ -140,11 +146,15 @@
                 data: pecah[0],
                 success: function (data) {
                     $("#type").val(data.type);
+                    $("#type_dta").val(data.type);
+
                     $("#tahun").val(data.tahun_perakitan);
+                    $("#tahun_dta").val(data.tahun_perakitan);
 
                 },
             });
         });
+        
     });
 
 </script>

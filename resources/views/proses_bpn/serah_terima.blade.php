@@ -3,19 +3,21 @@
 <div class="container-fluid">
             <div class="table-wrapper shadow">
                 <div class="table-title">
-                    <div class="col-sm-5 mb-2"><h2>Master <b>Custommer</b></h2></div>
+                    <div class="col-sm-5 mb-2"><h2>Serah  <b>Terima Biro jasa</b></h2></div>
                     <div class="d-flex justify-content-between">
                         <div class="search-box w-50">
                             <i class="material-icons">&#xE8B6;</i>
                             <input type="text" class="form-control shadow" placeholder="Search&hellip;">
                         </div>
-                        <a href="{{route('tambahcustommer')}}" class="btn btn-info add-new shadow"><i class="fa fa-plus"></i> Add Customer</a>
+                        <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="{{ url('myproductsDeleteAll') }}">Delete All Selected</button>
+                        <a href="{{url('tambah_serah_terima')}}" class="btn btn-info add-new shadow"><i class="fa fa-plus"></i> Add Data</a>
                     </div>
                 </div>
         <div class="table-responsive text-nowrap">
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr class="bg-primary">
+                       <th width="50px"><input type="checkbox" id="master"/> Select All</th>
                         <th class="text-white shadow">No Spk</th>
                         <th class="text-white shadow">No Cust</th>
                         <th class="text-white shadow">Nama</th>
@@ -27,6 +29,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                    <td><input type="checkbox" class="sub_chk" data-id=""></td>
                         <td>BY0001</td>
                         <td>Kas Besar</td>
                         <td>Kas Besar</td>
@@ -55,4 +58,54 @@
             </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-confirmation/1.0.5/bootstrap-confirmation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#master').on('click', function(e) {
+         if($(this).is(':checked',true))  
+         {
+            $(".sub_chk").prop('checked', true); 
+         } else {  
+            $(".sub_chk").prop('checked',false); 
+         }  
+        });
+
+        $('.delete_all').on('click', function(e) {
+            var allVals = [];  
+            $(".sub_chk:checked").each(function() {  
+                allVals.push($(this).attr('data-id'));
+            });  
+
+            if(allVals.length <=0)  
+            {  
+                alert("Please select row."); 
+            }  else {  
+                var check = confirm("Are you sure you want to Print this row?"); 
+                if(check == true){  
+                    var join_selected_values = allVals.join(","); 
+
+                    $.ajax({
+                        url: $(this).data('url'),
+                        type: 'DELETE',
+                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                        data: 'ids='+join_selected_values,
+                        success: function (data) {
+                           
+                        },
+                        error: function (data) {
+                            alert(data.responseText);
+                        }
+                    });
+
+                  $.each(allVals, function( index, value ) {
+                      $('table tr').filter("[data-row-id='" + value + "']").remove();
+                  });
+                } 
+            }  
+        });
+    });
+</script>
 @endsection

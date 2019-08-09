@@ -15,6 +15,7 @@ class MasterKaryawan extends Migration
     {
         Schema::create('master_karyawan', function (Blueprint $table) {
             $table->increments("id");
+            $table->string("kode_karyawan")->unique();
             $table->string("nik", 50)->unique();
             $table->string("alamat");
             $table->string("nama");

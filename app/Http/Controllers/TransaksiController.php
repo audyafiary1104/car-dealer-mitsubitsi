@@ -19,23 +19,35 @@ class TransaksiController extends Controller
         $some_date = Carbon::now()->toDateTimeString();
         $now = Carbon::createFromFormat('Y-m-d H:i:s', $some_date)->setTimezone('Asia/Jakarta');
         $time = date('Y-m-d',strtotime($now));
-        DB::table('pengajuan_smk')->insert([
+        $k = DB::table('pengajuan_smk')->max('kode_smk');
+        $no = 1;
+        if($k){
+            $cag = explode('SMK',$k);
+            $kode = "SMK".sprintf("%03s", abs($cag[1] + 1));
+        }else{
+            $kode = "SMK".sprintf("%03s",abs($no));
+        }       
+         $pengajuan_smk = DB::table('pengajuan_smk')->insertGetID([
+            'kode_smk' =>$kode,
             'nama_cust' => $pecah_cust[1],
             'id_cust' => $pecah_cust[0],
             'tanggal_pemesan' => $request->tanggal_pemesan,
             'nama_stnk' => $request->nama_stnk,
             'alamat' => $request->alamat,
-            'merk' => $id[0],
-            'type' => $id[1],
+            'merk' => $id[1],
+            'type' => $request->type_dta,
             'tahun' => $request->tahun,
             'warna' => $request->warna,
             'id_sales' => $pecah[0],
             'nama_sales' => $pecah[1],
             'tanggal_input' => $time,
             'nilai_versekot' => $request->nilai_versekot,
-            'payment' => $request->payment,
+            'payment' => $request->type_pembayaran,
+            'jenis_payment' => $request->payment,
+            'bbn' => $request->bbn,
             'pembayaran_paling_lambat' => $request->pembayaran_paling_lambat
         ]);
+        
         Alert::success('Success', 'Data berhasil ditambahkan');
         return redirect()->route('pengajuan_smk');
     }
@@ -83,7 +95,7 @@ class TransaksiController extends Controller
     public function confirm_bm()
     {
         $conf_spv = DB::table('pengajuan_smk')->where('status_pembayaran','==','Belum Terbayar')
-        ->Orwhere('status_bm',null)->get();
+        ->Orwhere('status_bm',null)->where('status','setuju')->get();
         return view('transaksi_finance.smk.konfirmasi_smk',compact('conf_spv'));
     }
     public function pengajuan_index_ajax($id)

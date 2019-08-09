@@ -23,7 +23,7 @@
                 <div class="input-group mb-3">
                     <label for="no_faktur" class="col-xs-3 col-form-label mr-2">No</label>
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"> BOM/2019 </span>
+                        <span class="input-group-text" id="basic-addon1"> {{$spk->kode_spk}} </span>
                     </div>
                     <input type="text" class="form-control" placeholder="79/90" aria-label="Username" aria-describedby="basic-addon1">
                 </div>

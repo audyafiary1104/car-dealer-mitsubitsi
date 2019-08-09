@@ -24,8 +24,8 @@
             <tbody>
                 @foreach($spk as $spk)
                 <tr>
-                    <td>BOM/20019/0001</td>
-                    <td>SMK0001</td>
+                    <td>{{$spk->kode_spk}}</td>
+                    <td>{{$spk->kode_smk}}</td>
                     <td>{{$spk->nama_cust}}</td>
                     <td>{{$spk->alamat}}</td>
                     <td>{{$spk->ktp}}</td>
