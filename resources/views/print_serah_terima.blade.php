@@ -1,4 +1,7 @@
 <p>&nbsp;</p>
+<center><span style="font-size: 16px;"><strong>No Faktur : {{$no_faktur}}</strong></span></center>
+<p>&nbsp;</p>
+
 <center><span style="font-size: 16px;"><strong>Serah Terima Biro Jasa</strong></span></center>
 <center><br />
     <table style="width: 550px; font-size: 8pt; font-family: calibri; border-collapse: collapse;" border="1"
@@ -16,8 +19,8 @@
             </tr>
             @foreach($biro as  $biro)
             <tr>
-                <td>{{$biro->no_spk}}</td>
-                <td>{{$biro->no_smk}}</td>
+                <td>{{$biro->kode_spk}}</td>
+                <td>{{$biro->kode_smk}}</td>
                 <td>{{$biro->no_cust}}</td>
                 <td>{{$biro->nama}}</td>
                 <td>{{$biro->alamat}}</td>

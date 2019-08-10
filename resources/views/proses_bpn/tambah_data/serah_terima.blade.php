@@ -8,7 +8,7 @@
                     <h2>Tambah <b>Serah Terima</b></h2>
                 </div>
             </div>
-            <form action="{{url('add_cabang')}}" method="post">
+            <form action="{{url('tambah_serah_terima/add')}}" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nomor Spk</label>
@@ -28,6 +28,8 @@
                     disabled  placeholder="Nama">
                     <input type="hidden" name="no_cust" class="form-control kode_custommer" id="exampleFormControlInput1"
                       placeholder="nomor_cust">
+                      <input type="hidden" name="id_spk" class="form-control id_spk" id="exampleFormControlInput1"
+                    placeholder="Nama">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nama</label>
@@ -78,11 +80,14 @@
                 url: "/tambah_serah_terima/ajax/"+selectedCCountry,
                 type: "POST",
                 success: function (data) {
-                    $("#Alamat").val(data.alamat);
+                    console.log(data);
+                    $(".Alamat").val(data.alamat);
                     $(".kode_custommer").val(data.kode_custommer);
                     $(".nama").val(data.nama);
                     $(".type").val(data.type_kendaraan);
                     $(".Warna").val(data.warna);
+                    $(".id_spk").val(data.id);
+
 
                 },
             });

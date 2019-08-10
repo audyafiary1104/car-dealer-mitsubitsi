@@ -22,7 +22,7 @@ class SerahTerima extends Migration
             $table->string('alamat');
             $table->string('type_kendaraan');
             $table->string('warna');
-
+            $table->string('nomor_faktur')->nullable();
         });
     }
 

@@ -16,7 +16,6 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr class="bg-primary"> 
-                    <th  class="text-white shadow"><input type="checkbox" id="master"></th>
                         <th class="text-white shadow">No Smk</th>
                         <th class="text-white shadow">Nama Peminat</th>
                         <th class="text-white shadow">Address</th>
@@ -31,7 +30,6 @@
                 <tbody>
                 @foreach($smk as $smk)
                     <tr id="tr_{{$smk->id}}">
-                    <td><input type="checkbox" class="sub_chk" data-id="{{$smk->id}}"></td>
 
                         <td>{{$smk->kode_smk}}</td>
                         <td>{{$smk->nama_cust}}</td>

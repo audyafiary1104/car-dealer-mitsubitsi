@@ -7,7 +7,6 @@
                     <div class="d-flex justify-content-between">
                         <div class="search-box w-50">
                             <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control shadow" placeholder="Search&hellip;">
                         </div>
                         <a href="" class="btn btn-info add-new shadow"><i class="fa fa-plus"></i> Add Customer</a>
                     </div>
