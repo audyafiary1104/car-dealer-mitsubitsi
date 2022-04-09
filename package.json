@@ -24,7 +24,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nprogress": "^0.2.0",
     "sleek-dashboard": "^1.0.0-beta.2"
   }
